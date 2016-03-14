@@ -1,0 +1,16 @@
+package hr.fer.zemris.java.tecaj_1;
+
+import java.util.Iterator;
+
+public class Citati {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Hello world!");
+
+		for (String string : args) {
+			System.out.println(string);
+		}
+	}
+
+}

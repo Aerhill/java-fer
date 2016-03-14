@@ -1,0 +1,46 @@
+package hr.fer.zemris.java.tecaj.hw1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Rectangle {
+
+	public static void main(String[] args) throws IOException {
+		double a = 0.0,b = 0.0;
+		double area, perimeter;
+		if(args.length == 2){
+			a = Double.parseDouble(args[0]);
+			b = Double.parseDouble(args[1]);
+		} else {
+			System.out.println("Please provide width: ");
+			
+			a = getEdge("width");
+			b = getEdge("height");
+		}
+		
+		
+		if(!Double.valueOf(a).equals(0.0) && Double.valueOf(a).equals(0.0)){
+			area = a*b;
+			perimeter = 2*a + 2*b;
+		}
+	}
+
+	private static double getEdge(String string) {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		while(true) {
+			String red = reader.readLine();
+			if(red == null) {
+				break;
+			}
+			if(red.isEmpty()){
+				System.out.println("Nothing was given");
+				continue;
+			}
+			a = Double.parseDouble(red);
+		}
+		reader.close();
+		return 0;
+	}
+
+}

@@ -1,0 +1,36 @@
+package hr.fer.zemris.java.tecaj.hw1;
+
+
+public class Roots {
+
+	public static void main(String[] args) {
+		int re; // realni dio
+		int im; // imaginarni dio
+		int n;  // n-ti korijen
+		
+		long a, b; // realni i imaginarni dio n-tog korijena
+		if (args.length != 3) {
+			System.out.println("Invalid number of arguments");
+		} else if (Integer.parseInt(args[2]) < 2) {
+			System.out.println("Root must be positive number > 1");
+		} else {
+			re = Integer.parseInt(args[0]);
+			im = Integer.parseInt(args[1]);
+			n  = Integer.parseInt(args[2]);
+			
+			double r = Math.sqrt(re*re + im*im);
+			r = Math.pow(r, 1./n);
+			double fi = Math.atan( 1.*im/re );
+			
+			System.out.println("You requested calculation of "+n+". roots. Solutions are:");
+			for( int i=0; i<n; i++ ){
+				
+				a = Math.round( r*Math.cos( (fi+2*i*Math.PI)/n ) );
+				b = Math.round( r*Math.sin( (fi+2*i*Math.PI)/n ) );
+				
+				if(b>0) System.out.println(i+1+") "+a+" + "+b+"i");
+				else System.out.println(i+1+") "+a+" - "+(-b)+"i");
+			}
+		}
+	}
+}
