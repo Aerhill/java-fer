@@ -44,6 +44,6 @@ public class HofstadterQ {
 		if(n == 1 || n == 2){
 			return 1;
 		}
-		return Hofstadter((int) (n - Hofstadter(n-1))) + Hofstadter((int) (n- Hofstadter(n-2)));
+		return Hofstadter(n - Hofstadter(n-1)) + Hofstadter(n- Hofstadter(n-2));
 	}
 }

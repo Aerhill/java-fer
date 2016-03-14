@@ -35,15 +35,17 @@ public class HofstadterQ {
 	}
 
 	/**
-	 * Metoda koja racuna Hofstadterov red
 	 * 
 	 * @param n
 	 * @return
 	 */
 	private static long Hofstadter(int n) {
-		if(n == 1 || n == 2){
-			return 1;
+		long Q[] = new long[n + 1];
+		Q[1] = Q[2] = 1;
+		for (int i = 3; i <= n; i++) {
+			Q[i] = Q[(int) (i - Q[i - 1])] + Q[(int) (i - Q[i - 2])];
 		}
-		return Hofstadter((int) (n - Hofstadter(n-1))) + Hofstadter((int) (n- Hofstadter(n-2)));
+		return Q[n];
 	}
+
 }
