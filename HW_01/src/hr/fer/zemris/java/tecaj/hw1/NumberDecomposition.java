@@ -10,15 +10,17 @@ public class NumberDecomposition {
 
 	/**
 	 * Metoda koja se poziva prilikom pokretanja programa.
-	 * @param args argument komandne linije je broj koji treba faktorizirati
+	 * 
+	 * @param args
+	 *            argument komandne linije je broj koji treba faktorizirati
 	 */
 	public static void main(String[] args) {
-		if(args.length != 1) {
+		if (args.length != 1) {
 			System.err.println("Invalid number of arguments");
 			return;
 		}
 		int n = Integer.parseInt(args[0]);
-		if( n <= 2) {
+		if (n <= 2) {
 			System.err.println("You must enter number greater than 2");
 			return;
 		}

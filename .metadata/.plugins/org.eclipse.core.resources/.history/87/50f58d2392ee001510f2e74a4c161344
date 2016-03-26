@@ -1,0 +1,111 @@
+package hr.fer.zemris.java.tecaj.hw2;
+
+/**
+ * Class ComplexNumber which represents an unmodifiable complex number.
+ * 
+ * @author Ante Spajic
+ *
+ */
+public class ComplexNumber {
+
+    private double real;
+    private double imaginary;
+
+    public ComplexNumber(double realPart, double imaginaryPart) {
+	this.real = realPart;
+	this.imaginary = imaginaryPart;
+    }
+
+    public static ComplexNumber fromReal(double real) {
+	return new ComplexNumber(real, 0.0);
+    }
+
+    public static ComplexNumber fromImaginary(double imaginary) {
+	return new ComplexNumber(0.0, imaginary);
+    }
+
+    public static ComplexNumber fromMagnitudeAndAngle(double magnitude,
+	    double angle) {
+	return null;
+    }
+
+    public static ComplexNumber parse(String s) {
+	return null;
+    }
+
+    public double getReal() {
+	return real;
+    }
+
+    public double getImaginary() {
+	return imaginary;
+    }
+
+    public double getMagnitude() {
+	return Math.sqrt(real * real + imaginary * imaginary);
+    }
+
+    public double getAngle() {
+	return Math.atan2(imaginary, real);
+    }
+
+    public ComplexNumber add(ComplexNumber c) {
+	double real = this.real + c.real;
+	double imag = this.imaginary + c.imaginary;
+	return new ComplexNumber(real, imag);
+    }
+
+    public ComplexNumber sub(ComplexNumber c) {
+	double real = this.real - c.real;
+	double imag = this.imaginary - c.imaginary;
+	return new ComplexNumber(real, imag);
+    }
+
+    public ComplexNumber mul(ComplexNumber c) {
+	double real = this.real * c.real - this.imaginary * c.imaginary;
+	double imag = this.real * c.imaginary + this.imaginary * c.real;
+	return new ComplexNumber(real, imag);
+    }
+
+    public ComplexNumber div(ComplexNumber c) {
+	if (c == null) {
+	    throw new NullPointerException("Argument cannot be null");
+	}
+	double a = c.getReal();
+	double b = c.getImaginary();
+	if (a == 0.0 && b == 0.0) {
+	    throw new IllegalArgumentException("Cannot divide by 0");
+	}
+	if (Math.abs(a) < Math.abs(b)) {
+	    double q = a / b;
+	    double denominator = a * q + b;
+	    return new ComplexNumber((real * q + imaginary) / denominator,
+		    (imaginary * q - real) / denominator);
+	} else {
+	    double q = b / a;
+	    double denominator = b * q + a;
+	    return new ComplexNumber((imaginary * q + real) / denominator,
+		    (imaginary - real * q) / denominator);
+	}
+    }
+
+    public ComplexNumber pow(int n) {
+	return null;
+    }
+
+    public ComplexNumber[] root(int n) {
+	return null;
+    }
+
+    @Override
+    public String toString() {
+	if (imaginary == 0)
+	    return real + "";
+	if (real == 0)
+	    return imaginary + "i";
+	if (imaginary < 0)
+	    return real + " - " + (-imaginary) + "i";
+	return real + " + " + imaginary + "i";
+    }
+
+}

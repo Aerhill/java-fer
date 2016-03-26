@@ -1,0 +1,19 @@
+package hr.fer.zemris.java.custom.collections;
+
+/**
+ * Processor class. To be updated later during the course.
+ * 
+ * @author Ante Spajic
+ *
+ */
+public class Processor {
+
+    	/**
+    	 * 
+    	 * 
+    	 * @param value  value to be processed
+    	 */
+	public void process(Object value){
+		
+	}
+}

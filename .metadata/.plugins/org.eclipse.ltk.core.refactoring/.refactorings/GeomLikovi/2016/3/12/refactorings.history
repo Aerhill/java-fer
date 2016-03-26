@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Demo1.java&apos; to &apos;GeomLikovi/src/hr.fer.zemris.java.tecaj2.demo&apos;&#x0A;- Original project: &apos;GeomLikovi&apos;&#x0A;- Destination element: &apos;GeomLikovi/src/hr.fer.zemris.java.tecaj2.demo&apos;&#x0A;- Original element: &apos;hr.fer.zemris.java.tecaj2.Demo1.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;hr.fer.zemris.java.tecaj2.demo" element1="/src&lt;hr.fer.zemris.java.tecaj2{Demo1.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1458379856917" units="1" version="1.0"/>
+</session>
