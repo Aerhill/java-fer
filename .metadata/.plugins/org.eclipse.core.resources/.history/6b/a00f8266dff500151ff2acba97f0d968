@@ -1,0 +1,506 @@
+package hr.fer.zemris.java.custom.scripting.lexer;
+
+import hr.fer.zemris.java.custom.scripting.elems.ElementConstantDouble;
+import hr.fer.zemris.java.custom.scripting.elems.ElementConstantInteger;
+import hr.fer.zemris.java.custom.scripting.elems.ElementFunction;
+import hr.fer.zemris.java.custom.scripting.elems.ElementOperator;
+import hr.fer.zemris.java.custom.scripting.elems.ElementString;
+import hr.fer.zemris.java.custom.scripting.elems.ElementVariable;
+import hr.fer.zemris.java.tecaj.hw3.prob1.TokenType;
+
+/**
+ * Razred <code>SmartScriptLexer</code> predstavlja objekt koji vrsi leksicku
+ * analizu dokumenta. Tekst biva leksicki obraden na nacin da se njegov sadrzaj
+ * konzumira znak po znak, te se postujuci pravila leksicke analize ovisno o
+ * konzumiranom tekstu generiraju pripadajuci tokeni. Tokeni enkapsuliraju
+ * obradene djelove dokumenta te bivaju prosljedeni pozivatelju. Lekser moze
+ * raditi u dva nacina, prvi nacin predstavlja okruzenje izvan "taga" (BASIC
+ * enumeracija) u kojem lekser konzumira znakove dokumenta te od njih gradi
+ * jedan objekt tipa <code>String</code>. Drugi nacin predstavlja okruzenje
+ * unutar "taga" (TAG enumeracija) gdje lekser konzumira znakove i formira
+ * argumente (argumenti su odvojeni prazninama). Sljedeci tokeni (definirani
+ * enumeracijom) mogu biti generirani u BASIC stanju leksera: TEXT, EOF, TAG.
+ * Sljedeci tokeni (definirani enumeracijom) mogu biti generirani u TAG stanju
+ * leksera: FUNCTION, VARIABLE, STRING, CONSTANT_INTEGER, CONSTANT_DOUBLE,
+ * OPERATOR, EOF, TAG. Za vise informacija o tome sto pojedini tokeni
+ * enkapsuliraju, posavjetovati dokumentaciju razreda
+ * <code>SmartTokenType</code>.
+ * 
+ * @author Hrvoje Bušić
+ *
+ */
+public class SmartScriptLexer {
+
+	/**
+	 * Polje znakova koje sadrzi tekst koji se obraduje.
+	 */
+	private char[] data;
+
+	/**
+	 * Trenutan polozaj u tekstu koji se obraduje.
+	 */
+	private int currentIndex;
+
+	/**
+	 * Posljednji generiran token od strane leksera.
+	 */
+	private SmartToken token;
+
+	/**
+	 * Stanje (nacin rada) u kojem se lekser trenutno nalazi.
+	 */
+	private SmartScriptLexerState state;
+
+	/**
+	 * Javni konstruktor razreda koji kao argument prima tekst nad kojim je
+	 * potrebno provesti leksicku analizu.
+	 * 
+	 * @param text
+	 *            tekst cija se leksicka analiza vrsi
+	 * @throws IllegalArgumentException
+	 *             ukoliko je vrijednost predana kao argument <code>null</code>
+	 *             vrijednost
+	 */
+	public SmartScriptLexer(String text) {
+		if (text == null) {
+			throw new IllegalArgumentException("Text given can not be null.");
+		}
+		data = text.toCharArray();
+		state = SmartScriptLexerState.BASIC;
+	}
+
+	/**
+	 * Javna metoda "tvornica" koja dohvaca sljedeci token (objekt-produkt
+	 * leksicke analize) leksera. Metoda vrsi implicitnu leksicku obradu
+	 * dokumenta, jer posao delegira pripadajucim metodama tvornicama koje se
+	 * pozivaju ovisno o stanju u kojem se lekser trenutno nalazi.
+	 * 
+	 * @return novi token generiran od strane leksera
+	 */
+	public SmartToken nextToken() {
+		SmartToken output = null;
+		switch (state) {
+		case BASIC:
+			output = basicState();
+			break;
+		case TAG:
+			output = tagState();
+			break;
+		}
+		return output;
+	}
+
+	/**
+	 * Javna getter metoda koja vraca referencu na posljednji generiran token od
+	 * strane leksera.
+	 * 
+	 * @return posljednji generiran token
+	 */
+	public SmartToken getToken() {
+		return token;
+	}
+
+	/**
+	 * Javna setter metoda koja postavlja stanje (nacin rada) leksera.
+	 * 
+	 * @param state
+	 *            zeljeni nacin rada leksera
+	 * @throws IllegalArgumentException
+	 *             ako je vrijednost predana <code>null</code> vrijednost
+	 */
+	public void setState(SmartScriptLexerState state) {
+		if (state == null) {
+			throw new IllegalArgumentException("Value given can not be null.");
+		}
+		this.state = state;
+	}
+
+	/**
+	 * Privatna metoda tvornica koja generira sljedeci token u BASIC nacinu rada
+	 * leksera. Metoda predstavlja jos jednu razinu implicite leksicke obrade
+	 * dokumenta, jer posao delegira specificnijim metodama tvornicama, koje
+	 * direktno generiraju tokene ovisno o sadrzaju dokumenta.
+	 * 
+	 * @return novo generirani token
+	 * @throws SmartScriptLexerException
+	 *             ako nije moguce generirati vise tokena
+	 * @throws SmartScriptLexerException
+	 *             ako tekst sadrzi neispravan znak "otvaranja" taga
+	 */
+	private SmartToken basicState() {
+
+//		prepareNext();
+		if (token != null && token.getType().equals(TokenType.EOF)) {
+			throw new SmartScriptLexerException("No more tokens to be generated.");
+		} else if (currentIndex == data.length) {
+			token = eofToken();
+		} else if (String.valueOf(data[currentIndex]).equals("{")) {
+
+			// We encountered tag and need to switch.
+			if (currentIndex + 1 < data.length && data[currentIndex + 1] == '$') {
+				return switcherToken();
+			} else {
+				throw new SmartScriptLexerException("Invalid opening tag.");
+			}
+
+		} else {
+			token = textToken();
+		}
+		return token;
+	}
+
+	/**
+	 * Privatna metoda tvornica koja generira sljedeci token u TAG nacinu rada
+	 * leksera. Metoda predstavlja jos jednu razinu implicite leksicke obrade
+	 * dokumenta, jer posao delegira specificnijim metodama tvornicama, koje
+	 * direktno generiraju tokene ovisno o sadrzaju dokumenta.
+	 * 
+	 * @return novo generirani token
+	 * @throws SmartScriptLexerException
+	 *             ako nije moguce generirati vise tokena
+	 * @throws SmartScriptLexerException
+	 *             ako tekst sadrzi neispravan znak "zatvaranja" taga
+	 */
+	private SmartToken tagState() {
+
+//		prepareNext();
+		if (token != null && token.getType().equals(SmartTokenType.EOF)) {
+			throw new SmartScriptLexerException("No more tokens to be generated.");
+		} else if (currentIndex == data.length) {
+			token = eofToken();
+		} else if (String.valueOf(data[currentIndex]).equals("$")) {
+
+			// We encountered tag and need to switch.
+			if (currentIndex + 1 < data.length && data[currentIndex + 1] == '}') {
+				return switcherToken();
+			} else {
+				throw new SmartScriptLexerException("Invalid closing tag.");
+			}
+
+			// Special case when tag name can be set to '=', last token
+			// needs to be of type 'EOF'. We pass this as
+			// string.
+		} else if (String.valueOf(data[currentIndex]).equals("=") && token.getType().equals(SmartTokenType.TAG)) {
+			token = new SmartToken(SmartTokenType.STRING, new ElementString("="));
+			currentIndex++;
+		} else if (String.valueOf(data[currentIndex]).equals("@")) {
+			token = functionToken();
+		} else if (String.valueOf(data[currentIndex]).equals("\"")) {
+			token = stringToken();
+		} else if (Character.isLetter(data[currentIndex])) {
+			token = variableToken();
+		} else if (Character.isDigit(data[currentIndex])) {
+			token = numberToken();
+		} else {
+			// Ako simbol '-' slijedi broj, funkcija ce ispravno izvrsiti
+			// delegaciju posla.
+			token = symbolToken();
+		}
+		return token;
+	}
+
+	/**
+	 * Privatna metoda tvornica koja vrsi eksplicitnu leksicku obradu teksta
+	 * dokumenta. Metoda se moze pozvati i iz BASIC i iz TAG nacina rada
+	 * leksera, te vrsi promjenu nacina rada leksera konzumirajuci pritom dio
+	 * teksta koji se odnosi na specifikaciju za otvaranje ili zatvaranje taga.
+	 * 
+	 * @return token specifikacije za otvaranje ili zatvaranje taga
+	 */
+	private SmartToken switcherToken() {
+		switch (state) {
+		case BASIC:
+			setState(SmartScriptLexerState.TAG);
+			break;
+		case TAG:
+			setState(SmartScriptLexerState.BASIC);
+			break;
+		}
+
+		// Preskacemo tag.
+		currentIndex += 2;
+		token = new SmartToken(SmartTokenType.TAG, new ElementString("TAG"));
+		return token;
+	}
+
+	/**
+	 * Privatna metoda tvornica koja vrsi eksplicitnu leksicku obradu teksta
+	 * dokumenta. Metoda se moze pozvati iz BASIC nacina rada leksera, te
+	 * konzumira znakove dokumenta na nacin da ih grupira u jedan objekt tipa
+	 * <code>String</code>, sve dok ne naide na specifikaciju za otvarnje taga,
+	 * ili kraj dokumenta. Metoda dopusta escapeanje znakova
+	 * '\','{','"','\r','\n','\t', provjera ispravnog escapeanja se vrsi kroz
+	 * delegaciju posla prikladnoj metodi. Metoda enkapsulira obradeni sadrzaj u
+	 * token kojeg vraca kao povratnu vrijednost.
+	 * 
+	 * @return token, enkapsulira objekt tipa <code>String</code>
+	 */
+	private SmartToken textToken() {
+		StringBuilder sb = new StringBuilder();
+		while (currentIndex < data.length && data[currentIndex] != '{') {
+			if (checkValidEscapesBasic(sb)) {
+				continue;
+			} else {
+				sb.append(data[currentIndex++]);
+			}
+		}
+		return new SmartToken(SmartTokenType.TEXT, new ElementString(sb.toString()));
+	}
+
+	/**
+	 * Privatna metoda tvornica koja vrsi eksplicitnu leksicku obradu teksta
+	 * dokumenta. Metoda se moze pozvati iz TAG nacina rada leksera, te
+	 * konzumira znakove dokumenta na nacin da ih tumaci kao broj koji moze biti
+	 * primjerak razreda <code>Integer</code> ili <code>Double</code>. Ukoliko
+	 * broj nije ispravno zapisan (ne zadovoljava specifikacije navedenih
+	 * razreda), izaziva se iznimka uz prikladnu poruku. Metoda enkapsulira
+	 * obradeni sadrzaj u token kojeg vraca kao povratnu vrijednost.
+	 * 
+	 * @return token, enkapsulira objekt tipa <code>Integer</code> ili
+	 *         <code>Double</code>
+	 * @throws SmartScriptLexerException
+	 *             ukoliko broj ne zadovoljava specifikacije razreda
+	 *             <code>Integer</code> i <code>Double</code>
+	 */
+	private SmartToken numberToken() {
+		StringBuilder sb = new StringBuilder();
+		int dotCounter = 0;
+
+		// Provjeravamo da li nam je metoda simbol
+		// proslijedila posao.
+		if (data[currentIndex] == '-') {
+			sb.append(data[currentIndex++]);
+		}
+
+		while (currentIndex < data.length && (Character.isDigit(data[currentIndex]) || data[currentIndex] == '.')) {
+			if (data[currentIndex] == '.') {
+				dotCounter++;
+			}
+			sb.append(data[currentIndex++]);
+		}
+
+		if (dotCounter > 1) {
+			throw new SmartScriptLexerException("Number is invalid");
+		}
+
+		if (sb.toString().contains(".")) {
+			return new SmartToken(SmartTokenType.CONSTANT_DOUBLE,
+					new ElementConstantDouble(Double.parseDouble(sb.toString())));
+		} else {
+			return new SmartToken(SmartTokenType.CONSTANT_INTEGER,
+					new ElementConstantInteger(Integer.parseInt(sb.toString())));
+		}
+	}
+
+	/**
+	 * Privatna metoda tvornica koja vrsi eksplicitnu leksicku obradu teksta
+	 * dokumenta. Metoda se moze pozvati iz TAG nacina rada leksera, te
+	 * konzumira znakove dokumenta na nacin da ih tumaci kao simbol. Dopusteni
+	 * simboli su '+','-','*','/','^'. Ukoliko simbol ne pripada dopustnim
+	 * simbolima, izaziva se iznimka uz prikladnu poruku. Metoda enkapsulira
+	 * obradeni sadrzaj u token kojeg vraca kao povratnu vrijednost.
+	 * 
+	 * @return token, enkapsulira objekt tipa <code>String</code>
+	 * @throws SmartScriptLexerException
+	 *             ako simbol ne pripada dopustenim simbolima
+	 */
+	private SmartToken symbolToken() {
+		char symbol = data[currentIndex];
+
+		if (symbol == '-' && currentIndex + 1 < data.length && Character.isDigit(data[currentIndex + 1])) {
+			return numberToken();
+		} else if (symbol == '-' || symbol == '+' || symbol == '*' || symbol == '/' || symbol == '^') {
+			return new SmartToken(SmartTokenType.OPERATOR, new ElementOperator(String.valueOf(data[currentIndex++])));
+		} else {
+			throw new SmartScriptLexerException("Symbol (operator) is invalid.");
+		}
+	}
+
+	/**
+	 * Privatna metoda tvornica koja vrsi eksplicitnu leksicku obradu teksta
+	 * dokumenta. Metoda se moze pozvati iz TAG nacina rada leksera, te
+	 * konzumira znakove dokumenta koji se nalaze unutar znakova navodnika
+	 * tumaceci ih kao jednu rijec, objekt tipa <code>String</code>. Metoda
+	 * dopusta escapeanje znakova '\','"','\r','\n','\t',provjera ispravnog
+	 * escapeanja se vrsi kroz delegaciju posla prikladnoj metodi. Metoda
+	 * enkapsulira obradeni sadrzaj u token kojeg vraca kao povratnu vrijednost.
+	 * 
+	 * @return token, enkapsulira objekt tipa <code>String</code>
+	 */
+	private SmartToken stringToken() {
+		StringBuilder sb = new StringBuilder();
+
+		// Preskacemo znak navodnika.
+		currentIndex++;
+		while (currentIndex < data.length && data[currentIndex] != '"') {
+			if (checkValidEscapesTag(sb)) {
+				continue;
+			} else {
+				sb.append(data[currentIndex++]);
+			}
+		}
+		// Preskacemo znak navodnika.
+		currentIndex++;
+
+		return new SmartToken(SmartTokenType.STRING, new ElementString(new String(sb.toString())));
+	}
+
+	/**
+	 * Privatna metoda tvornica koja vrsi eksplicitnu leksicku obradu teksta
+	 * dokumenta. Metoda se moze pozvati iz TAG nacina rada leksera, te
+	 * konzumira znakove dokumenta na nacin da ih tumaci kao naziv varijable.
+	 * Dopusteni nazivi varijabli su oni koji pocinju sa slovom, te mogu
+	 * sadrzavati nijedno, jedno ili vise drugih znakova - slova,brojeva i
+	 * podvlaka. Provjera ispravnosti nazivlja se delegira prirucnoj metodi.
+	 * Metoda enkapsulira obradeni sadrzaj u token kojeg vraca kao povratnu
+	 * vrijednost.
+	 * 
+	 * @return token, enkapsulira objekt tipa <code>String</code>
+	 */
+	private SmartToken variableToken() {
+		StringBuilder sb = new StringBuilder();
+		nameBuilder(sb);
+		return new SmartToken(SmartTokenType.VARIABLE, new ElementVariable(sb.toString()));
+	}
+
+	/**
+	 * Privatna metoda tvornica koja vrsi eksplicitnu leksicku obradu teksta
+	 * dokumenta. Metoda se moze pozvati iz TAG nacina rada leksera, te
+	 * konzumira znakove dokumenta na nacin da ih tumaci kao naziv varijable.
+	 * Dopusteni nazivi varijabli su oni koji pocinju sa slovom, te mogu
+	 * sadrzavati nijedno, jedno ili vise drugih znakova - slova,brojeva i
+	 * podvlaka. Provjera ispravnosti nazivlja se delegira prirucnoj metodi.
+	 * Metoda enkapsulira obradeni sadrzaj u token kojeg vraca kao povratnu
+	 * vrijednost.
+	 * 
+	 * @return token, enkapsulira objekt tipa <code>String</code>
+	 */
+	private SmartToken functionToken() {
+		StringBuilder sb = new StringBuilder();
+
+		// Preskacemo '@' znak.
+		currentIndex++;
+
+		nameBuilder(sb);
+		return new SmartToken(SmartTokenType.FUNCTION, new ElementFunction(sb.toString()));
+	}
+
+	/**
+	 * Privatna metoda tvornica koja generira objekt tipa
+	 * <code>SmartToken</code>, koji singalizira kraj obrade predanog
+	 * tekstualnog dokumenta. Ova metoda djeluje u "BASIC" i u "TAG" nacinu rada
+	 * leksera.
+	 * 
+	 * @return token koji singalizira kraj obrade predanog tekstualnog dokumenta
+	 */
+	private SmartToken eofToken() {
+		return new SmartToken(SmartTokenType.EOF, null);
+	}
+
+	/**
+	 * Privatna prirucna metoda koja se brine da tekst za obradu u sljedecem
+	 * pozivu metode <code>nextToken</code> ne sadrzi praznine na samom pocetku.
+	 */
+	private void prepareNext() {
+		data = String.valueOf(data).substring(currentIndex).trim().toCharArray();
+		currentIndex = 0;
+	}
+
+	/**
+	 * Privatna pomocna metoda koja vrsi provjeru ispravnosti escape sekvenci na
+	 * koje se naislo pri obradi teksta u BASIC nacinu rada leksera. Metoda
+	 * dopusta escapeanje znakova '\','{','"','\r','\n','\t'. Metoda preko
+	 * povratne vrijednosti daje znak da li sljedeci znak predstavlja escape
+	 * sekvencu, i ako je to istina, prikladno ju obraduje.
+	 * 
+	 * @param sb
+	 *            stream za formiranje niza znakova
+	 * @return <code>true</code> ako je escape sekvenca prisutna i obradena,
+	 *         <code>false</code> u suprotnom
+	 * @throws SmartScriptLexerException
+	 *             ako je escape sekvenca neispravno zatvorena
+	 * @throws SmartScriptLexerException
+	 *             ako se radi o neispravnoj escape sekvenci
+	 */
+	private boolean checkValidEscapesBasic(StringBuilder sb) {
+		if (data[currentIndex] == '\\') {
+
+			if (currentIndex + 1 >= data.length) {
+				throw new SmartScriptLexerException("Invalid BASIC escape sequence. Sequence out of bounds.");
+			}
+
+			char c = data[++currentIndex];
+			if (c == '\\' || c == '"' || c == 'r' || c == 'n' || c == 't' || c == '{') {
+				sb.append("\\");
+				sb.append(data[currentIndex++]);
+				return true;
+			} else {
+				throw new SmartScriptLexerException("Invalid BASIC escape sequence.");
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Privatna pomocna metoda koja vrsi provjeru ispravnosti escape sekvenci na
+	 * koje se naislo pri obradi teksta u TAG nacinu rada leksera. Metoda
+	 * dopusta escapeanje znakova '\','"','\r','\n','\t'. Metoda preko povratne
+	 * vrijednosti daje znak da li sljedeci znak predstavlja escape sekvencu, i
+	 * ako je to istina, prikladno ju obraduje.
+	 * 
+	 * @param sb
+	 *            stream za formiranje niza znakova
+	 * @return <code>true</code> ako je escape sekvenca prisutna i obradena,
+	 *         <code>false</code> u suprotnom
+	 * @throws SmartScriptLexerException
+	 *             ako je escape sekvenca neispravno zatvorena
+	 * @throws SmartScriptLexerException
+	 *             ako se radi o neispravnoj escape sekvenci
+	 */
+	private boolean checkValidEscapesTag(StringBuilder sb) {
+		if (data[currentIndex] == '\\') {
+
+			if (currentIndex + 1 >= data.length) {
+				throw new SmartScriptLexerException("Invalid TAG escape sequence. Sequence out of bounds.");
+			}
+
+			char c = data[++currentIndex];
+			if (c == '\\' || c == '"' || c == 'r' || c == 'n' || c == 't') {
+				sb.append("\\");
+				sb.append(data[currentIndex++]);
+				return true;
+			} else {
+				throw new SmartScriptLexerException("Invalid TAG escape sequence.");
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Privatna prirucna metoda koja vrsi provjeru da li niz znakova koji se
+	 * trenutno obraduje iz teksta dokumenta zadovljava norme nazivlja, kod
+	 * metoda <code>variableToken</code> i <code>functionToken</code>. Za vise
+	 * informacija o pravilima nazivlja, konzultirajte dokumentacije navedenih
+	 * metoda.
+	 * 
+	 * @param sb
+	 *            stream za formiranje niza znakova
+	 * @throws SmartScriptLexerException
+	 *             ako niz znakova ne zadovoljava norme nazivlja metoda
+	 *             <code>variableToken</code> i <code>functionToken</code>
+	 */
+	private void nameBuilder(StringBuilder sb) {
+		int i = 0;
+		while (currentIndex < data.length && (Character.isLetter(data[currentIndex])
+				|| Character.isDigit(data[currentIndex]) || data[currentIndex] == '_')) {
+
+			if (i == 0 && !Character.isLetter(data[currentIndex])) {
+				throw new SmartScriptLexerException("Name is invalid");
+
+			} else {
+				sb.append(data[currentIndex++]);
+				i++;
+			}
+		}
+	}
+}

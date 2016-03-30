@@ -1,0 +1,11 @@
+package hr.fer.zemris.java.custom.scripting.nodes;
+
+/**
+ * A node representing a single for-loop construct. It inherits from Node class.
+ * 
+ * @author Ante Spajic
+ *
+ */
+public class ForLoopNode extends Node {
+
+}

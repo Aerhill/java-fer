@@ -1,0 +1,17 @@
+package hr.fer.zemris.java.tecaj.hw3.prob1;
+
+public class LexerException extends RuntimeException {
+
+    /**
+     * Generated serial version ID
+     */
+    private static final long serialVersionUID = -3418417678755472299L;
+
+    public LexerException() {
+    }
+    
+    public LexerException(String message) {
+	super(message);
+    }
+    
+}

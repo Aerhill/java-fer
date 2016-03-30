@@ -1,0 +1,45 @@
+package hr.fer.zemris.java.custom.scripting.lexer;
+
+import hr.fer.zemris.java.custom.scripting.elems.Element;
+
+public class ScriptToken {
+
+	/**
+	 * Defines the type of token.
+	 */
+	private TokenType type;
+	/**
+	 * Element that it holds.
+	 */
+	private Element element;
+
+	/**
+	 * Public constructor that takes two arguments, TokenType which describes
+	 * what this token holds and an Element that it holds.
+	 * 
+	 * @param type
+	 *            Type of this token.
+	 * @param element
+	 *            Element to hold
+	 */
+	public ScriptToken(TokenType type, Element element) {
+		if (type == null) {
+			throw new IllegalArgumentException("Value given can not be null.");
+		}
+		this.type = type;
+		this.element = element;
+	}
+
+	public TokenType getType() {
+		return type;
+	}
+
+	public Element getValue() {
+		return element;
+	}
+
+	@Override
+	public String toString() {
+		return "(" + type + ", " + element.asText() + ")";
+	}
+}

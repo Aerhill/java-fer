@@ -1,0 +1,23 @@
+package hr.fer.zemris.java.custom.scripting.elems;
+
+/**
+ * 
+ * This class is used for storing element variables inside of echo and forloop
+ * nodes.
+ * 
+ * @author Ante Spajic
+ *
+ */
+public class ElementVariable extends Element {
+
+	private String name;
+
+	public ElementVariable(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String asText() {
+		return name;
+	}
+}

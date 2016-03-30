@@ -1,0 +1,11 @@
+package hr.fer.zemris.java.tecaj.hw3.prob1;
+
+public class Test {
+
+	public static void main(String[] args) {
+		String test = "ABC123.,:( )15315";
+		test = test.replaceAll("\\s*[a-zA-Z0-9]","");
+		System.out.println(test);
+	}
+
+}

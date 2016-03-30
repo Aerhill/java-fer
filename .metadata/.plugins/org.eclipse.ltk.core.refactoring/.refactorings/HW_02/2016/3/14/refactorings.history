@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;hr.fer.zemris.java.custom.collections&apos; to &apos;HW03-0036487741/src&apos;&#x0A;- Original project: &apos;HW_02&apos;&#x0A;- Destination element: &apos;HW03-0036487741/src&apos;&#x0A;- Original element: &apos;HW_02/src/hr.fer.zemris.java.custom.collections&apos;" description="Copy package" destination="=HW03-0036487741/src" element1="/src&lt;hr.fer.zemris.java.custom.collections" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1459104886176" version="1.0"/>
+</session>

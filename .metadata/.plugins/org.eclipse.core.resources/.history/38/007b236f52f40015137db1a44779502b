@@ -1,0 +1,22 @@
+package hr.fer.zemris.java.custom.scripting.elems;
+
+/**
+ * This class is used for storing operator elements inside of echo and forloop
+ * nodes.
+ * 
+ * @author Ante Spajic
+ *
+ */
+public class ElementOperator extends Element {
+
+	private String symbol;
+
+	public ElementOperator(String symbol) {
+		this.symbol = symbol;
+	}
+
+	@Override
+	public String asText() {
+		return symbol;
+	}
+}

@@ -1,0 +1,25 @@
+package hr.fer.zemris.java.custom.scripting.nodes;
+
+/**
+ * Base class for all graph nodes.
+ * 
+ * @author Ante Spajic
+ *
+ */
+public class Node {
+
+	
+	
+	/**
+	 * Adds given child to an internally managed collection of children.
+	 * 
+	 * @param child
+	 */
+	public void addChildNode(Node child) {
+		
+	}
+	
+	public int numberOfChildren() {
+		return 4;
+	}
+}

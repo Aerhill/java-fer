@@ -8,13 +8,13 @@ package hr.fer.zemris.java.custom.collections;
  */
 public class Processor {
 
-    /**
-     * Processes the given action on given object
-     * 
-     * @param value
-     *            value to be processed
-     */
-    public void process(Object value) {
+	/**
+	 * Processes the given action on given object
+	 * 
+	 * @param value
+	 *            value to be processed
+	 */
+	public void process(Object value) {
 
-    }
+	}
 }

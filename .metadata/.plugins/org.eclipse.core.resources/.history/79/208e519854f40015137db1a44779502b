@@ -1,0 +1,25 @@
+package hr.fer.zemris.java.custom.scripting.parser;
+
+/**
+ * 
+ * 
+ * @author Ante Spajic
+ *
+ */
+public class SmartScriptParserException extends RuntimeException {
+
+	/**
+	 * Default generated serial version ID
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * Constructs a new exception with <code>null</code> as its detail message.
+	 */
+	public SmartScriptParserException() {
+	}
+
+	public SmartScriptParserException(String message) {
+		super(message);
+	}
+}

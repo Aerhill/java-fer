@@ -1,0 +1,25 @@
+package hr.fer.zemris.java.custom.scripting.nodes;
+
+/**
+ * A node representing a piece of textual data. It inherits from Node class.
+ * 
+ * @author Ante Spajic
+ *
+ */
+public class TextNode extends Node {
+
+	private String text;
+	
+	public TextNode(String text) {
+		this.text = text;
+	}
+	
+	/**
+	 * Getter for this nodes text.
+	 * 
+	 * @return This nodes text
+	 */
+	public String getText() {
+		return text;
+	}
+}

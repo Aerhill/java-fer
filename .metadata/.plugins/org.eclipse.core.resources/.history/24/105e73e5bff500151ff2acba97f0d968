@@ -1,0 +1,6 @@
+package hr.fer.zemris.java.custom.scripting.lexer;
+
+public enum TokenType {
+
+	FUNCTION, VARIABLE, STRING, TEXT, CONSTANT_INTEGER, CONSTANT_DOUBLE, OPERATOR, EOF, TAG
+}

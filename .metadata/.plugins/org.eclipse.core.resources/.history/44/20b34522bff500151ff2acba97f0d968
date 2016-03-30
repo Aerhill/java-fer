@@ -1,0 +1,11 @@
+package hr.fer.zemris.java.custom.scripting.elems;
+
+/**
+ * Class used to quickly differentiate element types.
+ * 
+ * @author Ante Spajic
+ *
+ */
+public enum ElementType {
+	FUNCTION, VARIABLE, STRING, TEXT, CONSTANT_INTEGER, CONSTANT_DOUBLE, OPERATOR, EOF, TAG
+}

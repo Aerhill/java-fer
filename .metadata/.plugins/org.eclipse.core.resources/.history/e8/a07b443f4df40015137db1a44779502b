@@ -1,0 +1,12 @@
+package hr.fer.zemris.java.custom.scripting.nodes;
+
+/**
+ * Base class for all graph nodes.
+ * 
+ * @author Ante Spajic
+ *
+ */
+public class Node {
+
+	
+}

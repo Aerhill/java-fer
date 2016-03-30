@@ -1,0 +1,14 @@
+package hr.fer.zemris.java.custom.scripting.elems;
+
+/**
+ * Base class to represent an element of language.
+ * 
+ * @author Ante Spajic
+ *
+ */
+public class Element {
+
+	public String asString() {
+		return "";
+	}
+}

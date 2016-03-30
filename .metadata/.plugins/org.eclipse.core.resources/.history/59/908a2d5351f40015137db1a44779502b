@@ -1,0 +1,28 @@
+package hr.fer.zemris.java.custom.scripting.elems;
+
+public class ElementConstantInteger extends Element {
+
+	private int value;
+
+	public ElementConstantInteger(int value) {
+		this.value = value;
+	}
+	
+	/**
+	 * Returns this elements value.
+	 * 
+	 * @return This elements value
+	 */
+	public int getValue() {
+		return value;
+	}
+	
+	/**
+	 * Returns this elements value string representation.
+	 * 
+	 */
+	@Override
+	public String asText() {
+		return Integer.toString(value);
+	}
+}

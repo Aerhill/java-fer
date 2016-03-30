@@ -1,0 +1,32 @@
+package hr.fer.zemris.java.custom.scripting.elems;
+
+public class ElementFunction extends Element {
+
+	private String name;
+
+	public ElementFunction(String name) {
+		if (name == null) {
+
+		}
+		this.name = name;
+	}
+
+	/**
+	 * Returns the name of this function.
+	 * 
+	 * @return The name of function
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * Returns the name of the token preceded by a @ sign.
+	 * 
+	 * @return the name
+	 */
+	@Override
+	public String asText() {
+		return "@" + this.name;
+	}
+}

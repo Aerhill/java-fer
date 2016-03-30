@@ -1,0 +1,12 @@
+package hr.fer.zemris.java.custom.scripting.nodes;
+
+/**
+ * A node representing from Node class. a command which generates some textual
+ * output dynamically. It inherits
+ * 
+ * @author Ante Spajic
+ *
+ */
+public class EchoNode extends Node {
+
+}

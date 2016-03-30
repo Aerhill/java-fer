@@ -1,0 +1,152 @@
+package hr.fer.zemris.java.tecaj.hw3.prob1;
+
+public class Lexer {
+
+	private char[] data;
+	private Token token;
+	private int currentIndex;
+	private LexerState state;
+
+	public Lexer(String text) {
+		if (text == null) {
+			throw new IllegalArgumentException("Invalid text argument");
+		}
+		//text.trim();
+		this.data = text.toCharArray();
+		this.currentIndex = 0;
+		this.state = LexerState.BASIC;
+	}
+
+	/**
+	 * Generates a new token from given text and returns it.
+	 * 
+	 * @return
+	 * @throws LexerException
+	 */
+	public Token nextToken() {
+		if (currentIndex > data.length && token.getType().equals(TokenType.EOF)) {
+			throw new LexerException("There are no more tokens to be generated");
+		}
+
+		TokenType type = null;
+		Object value = null;
+
+		if (currentIndex == data.length) {
+			type = TokenType.EOF;
+			currentIndex++;
+		}
+
+		if (currentIndex < data.length) {
+			// skip spaces
+			while (Character.toString(data[currentIndex]).matches("\\s+")
+					&& currentIndex < data.length - 1) {
+				currentIndex++;
+			}
+			StringBuilder sb = new StringBuilder();
+			if (state == LexerState.BASIC) {
+				if (Character.isLetter(data[currentIndex])
+						|| data[currentIndex] == '\\') {
+					type = TokenType.WORD;
+					for (; currentIndex < data.length; currentIndex++) {
+						if (data[currentIndex] == '\\') {
+							if (currentIndex >= data.length - 1) {
+								throw new LexerException(
+										"Character expected after escape sign.");
+							}
+							if (!Character.isDigit(data[currentIndex + 1])
+									&& data[currentIndex + 1] != '\\') {
+								throw new LexerException(
+										"Invalid escape sequence, number or backslash is expected.");
+							}
+							sb.append(data[currentIndex + 1]);
+							currentIndex++;
+							continue;
+						}
+						if (data[currentIndex] == ' '
+								|| !Character.isLetter(data[currentIndex])) {
+							break;
+						}
+						sb.append(data[currentIndex]);
+					}
+					value = sb.toString();
+				} else if (Character.isDigit(data[currentIndex])) {
+					type = TokenType.NUMBER;
+
+					for (; currentIndex < data.length; currentIndex++) {
+						if (data[currentIndex] == ' '
+								|| !Character.isDigit(data[currentIndex])) {
+							break;
+						}
+						sb.append(data[currentIndex]);
+					}
+					try {
+						value = Long.parseLong(sb.toString());
+					} catch (Exception e) {
+						throw new LexerException(
+								"That number, wow, its too big");
+					}
+				} else {
+					String symbol = Character.toString(data[currentIndex++])
+							.replaceAll("[a-zA-Z0-9\\s*]", "");
+					symbol.trim();
+					if (!symbol.isEmpty()) {
+						type = TokenType.SYMBOL;
+						value = symbol.toCharArray()[0];
+						if ((char) value == '#') {
+							setState(LexerState.EXTENDED);
+						}
+					} else {
+						type = TokenType.EOF;
+					}
+				}
+			} else {
+				type = data[currentIndex] == '#' ? TokenType.SYMBOL
+						: TokenType.WORD;
+				for (; currentIndex < data.length; currentIndex++) {
+					if (data[currentIndex] == ' ') {
+						break;
+					}
+					if (data[currentIndex] == '#') {
+						setState(LexerState.BASIC);
+						value = '#';
+						break;
+					}
+					sb.append(data[currentIndex]);
+				}
+
+				if (sb.length() > 0 ) {
+					type = TokenType.WORD;
+					value = sb.toString();
+				} else {
+					type = TokenType.EOF;
+					value = null;
+				}
+			}
+		}
+
+		token = new Token(type, value);
+		return token;
+	}
+
+	/**
+	 * Returns last generated token.
+	 * 
+	 * @return Last generated token.
+	 */
+	public Token getToken() {
+		return token;
+	}
+
+	/**
+	 * Changes the state of lexer.
+	 * 
+	 * @param state
+	 *            New state to be set.
+	 */
+	public void setState(LexerState state) {
+		if (state == null || !(state instanceof LexerState)) {
+			throw new IllegalArgumentException("State cannot be: " + state);
+		}
+		this.state = state;
+	}
+}

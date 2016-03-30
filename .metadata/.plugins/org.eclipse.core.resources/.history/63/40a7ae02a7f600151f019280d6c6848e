@@ -1,0 +1,57 @@
+package hr.fer.zemris.java.custom.scripting.nodes;
+
+import hr.fer.zemris.java.custom.scripting.elems.Element;
+
+/**
+ * Razred <code>EchoNode</code> nasljeduje razred <code>Node</code> te
+ * predstavlja cvor koji pohranjuje sadrzaj (elemente) "praznog" taga. Prazan
+ * tag je onaj tag koji nema "uparen" tag koji ga zatvara. Cvor
+ * <code>EchoNode</code> moze pohranjivati proizvoljan broj elemenata (objekata
+ * tipa <code>Element</code>) proizvoljnog (pod)tipa.
+ * 
+ * @author Hrvoje Bušić
+ *
+ */
+public class EchoNode extends Node {
+
+	/**
+	 * Polje referenci na objekte tipa <code>Element</code>, sadrzaj taga.
+	 */
+	private Element[] elements;
+
+	/**
+	 * Javni konstruktor razreda kao argument prima referencu na jedan ili vise
+	 * objekata tipa <code>Element</code>, konstruktor vrsi njihovo
+	 * pohranjivanje u cvor.
+	 * 
+	 * @param elements
+	 *            elementi koji ce biti dodani u cvor
+	 * @throws IllegalArgumentException
+	 *             ako je vrijednost predana kao argument <code>null</code>
+	 *             vrijednost
+	 */
+	public EchoNode(Element... elements) {
+		if (elements == null) {
+			throw new IllegalArgumentException("Value given can not be null.");
+		}
+		this.elements = new Element[elements.length];
+		int i = 0;
+		for (Element element : elements) {
+			this.elements[i++] = element;
+		}
+	}
+
+	/**
+	 * Javni getter vraca kroz povratnu vrijednost referencu na elemente cvora.
+	 * 
+	 * @return referenca na elemente cvora
+	 */
+	public Element[] getElements() {
+		return elements;
+	}
+
+	@Override
+	public String toString() {
+		return "(Echo node," + elements.length + ")";
+	}
+}
