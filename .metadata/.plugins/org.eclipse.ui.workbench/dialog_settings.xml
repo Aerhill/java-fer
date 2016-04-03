@@ -40,6 +40,7 @@
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID"/>
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="HW03-0036487741.zip"/>
 			<item value="HW02-0036487741.zip"/>
 			<item value="HW01-0036487741.zip"/>
 		</list>

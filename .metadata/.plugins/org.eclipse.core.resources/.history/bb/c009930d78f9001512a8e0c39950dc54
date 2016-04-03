@@ -1,0 +1,5 @@
+package hr.fer.zemris.java.graphics.views;
+
+public interface RasterView {
+
+}

@@ -1,0 +1,18 @@
+package hr.fer.zemris.java.tecaj.p3.c;
+
+public class Demonstracija {
+
+	public static void main(String[] args) {
+		Storage storage = new Storage(10);
+		ValueProvider provider = Storage.getValueProvider();
+		
+		ispiši(provider);
+		
+		
+		
+	}
+
+	private static void ispiši(ValueProvider provider) {
+		System.out.printf("Value = %f Kvadrat = %f Korijen = %f %n", provider.getValue(), provider.getSquared(), provider.getSquareRoot());
+	}
+}

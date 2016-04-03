@@ -1,0 +1,8 @@
+package hr.fer.zemris.java.tecaj.p3.c;
+
+public class Demonstracija {
+
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CStringTests" project="HW04-0036487741" tests="30" started="30" failures="1" errors="2" ignored="0">
+  <testsuite name="hr.fer.zemris.java.cstr.CStringTests" time="0.001">
+    <testcase name="testContainsWithNullValue" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testContainsWithRegularValue" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0">
+      <failure>java.lang.AssertionError: Expected 'true' expected:&lt;true&gt; but was:&lt;false&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at hr.fer.zemris.java.cstr.CStringTests.testContainsWithRegularValue(CStringTests.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+</failure>
+    </testcase>
+    <testcase name="testReplaceAllWithCStringsAsArguments" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testRightInvalidIndexes1" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testRightInvalidIndexes2" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testRight" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0">
+      <error>java.lang.StringIndexOutOfBoundsException: String index out of range: 24
+	at hr.fer.zemris.java.cstr.CString.&lt;init&gt;(CString.java:64)
+	at hr.fer.zemris.java.cstr.CString.right(CString.java:238)
+	at hr.fer.zemris.java.cstr.CStringTests.testRight(CStringTests.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+</error>
+    </testcase>
+    <testcase name="testLeft" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testLeftInvalidIndexes1" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testLeftInvalidIndexes2" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testInvalidMargins" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testFromStringWithNullValue" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testAllWithValidArgumetns" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testStartsWithNullValue" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testReplaceAllWithNullAsValue1" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testReplaceAllWithNullAsValue2" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testReplaceAllWithNullAsValue3" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testAllWithNullValue" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testSubstringWithInvalidArguments1" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testSubstringWithInvalidArguments2" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testSubstringWithInvalidArguments3" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testLengthsStartsEnds" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testSubstringWithValidArguments" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testValidMargins1" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testValidMargins2" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testValidMargins3" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testFromStringWithRegularValue" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.001">
+      <error>java.lang.StringIndexOutOfBoundsException: String index out of range: 10
+	at java.lang.String.&lt;init&gt;(String.java:205)
+	at hr.fer.zemris.java.cstr.CString.toString(CString.java:120)
+	at hr.fer.zemris.java.cstr.CStringTests.testFromStringWithRegularValue(CStringTests.java:167)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+</error>
+    </testcase>
+    <testcase name="testRegularCreation" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testEndsWithNullValue" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testNullInputOnFirstConstructor" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testReplaceAllWithCharsAsArguments" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+  </testsuite>
+</testrun>

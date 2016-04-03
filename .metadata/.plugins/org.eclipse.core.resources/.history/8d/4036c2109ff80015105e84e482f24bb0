@@ -1,0 +1,13 @@
+package hr.fer.zemris.java.tecaj.p3;
+
+public class Demonstracija {
+
+	public static void main(String[] args) {
+
+		GeometrijskiLik[] likovi = new GeometrijskiLik[]{
+				new GeometrijskiLik()
+		};
+		Slika slika = new Slika();
+		
+	}
+}

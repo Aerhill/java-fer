@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=HW03-0036487741/src&lt;hr.fer.zemris.java.custom.scripting.elems{Element.java[Element" modifiers="1" timestamp="1459104256000"/>
-<typeInfo handle="=HW03-0036487741/src&lt;hr.fer.zemris.java.custom.scripting.nodes{Node.java[Node" modifiers="1" timestamp="1459108591000"/>
-<typeInfo handle="=HW03-0036487741/\/usr\/lib\/jvm\/java-8-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1445465910000"/>
+<typeInfo handle="=Predavanje_3/src&lt;hr.fer.zemris.java.tecaj.p3.c{ValueProvider.java[ValueProvider" modifiers="513" timestamp="1459585471000"/>
+<typeInfo handle="=Predavanje_3/\/usr\/lib\/jvm\/java-8-openjdk-amd64\/jre\/lib\/rt.jar&lt;org.omg.CORBA.portable(ValueInputStream.class[ValueInputStream" modifiers="1537" timestamp="1445465910000"/>
 </typeInfoHistroy>

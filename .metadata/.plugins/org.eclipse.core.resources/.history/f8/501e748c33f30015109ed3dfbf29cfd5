@@ -1,5 +1,0 @@
-package hr.fer.zemris.java.tecaj.hw3.prob1;
-
-public enum TokenType {
-
-}

@@ -1,9 +1,0 @@
-package snippet;
-
-public class Snippet {
-	public static void main(String[] args) {
-		data = String.valueOf(data).substring(currentIndex).trim().toCharArray();
-				currentIndex = 0;
-	}
-}
-

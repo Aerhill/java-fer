@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Predavanje_3/src/hr/fer/zemris/java/tecaj/p3/c2/Demonstracija.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="hr.fer.zemris.java.tecaj.p3.c2.Demonstracija"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Predavanje_3"/>
+</launchConfiguration>

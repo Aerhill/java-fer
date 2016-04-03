@@ -1,0 +1,153 @@
+package hr.fer.zemris.java.cstr;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+
+public class CStringTests {
+
+	@Test
+	public void testRegularCreation() {
+		CString string = new CString(String.valueOf("Štefica").toCharArray(),
+				1, 4);
+		assertEquals("Invalid string.", "tefi", string.toString());
+		assertEquals("Invalid length.", 4, string.length());
+		assertEquals("Invalid character.", 'e', string.charAt(1));
+
+		CString string2 = new CString(String.valueOf("Štefica").toCharArray());
+		assertEquals("Expected 'Štefica'", "Štefica", string2.toString());
+
+		CString string3 = new CString(string2);
+		assertEquals("Expected 'Štefica'", "Štefica", string3.toString());
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testNullInput() {
+		// must throw!
+		new CString(null, 2, 5);
+	}
+
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testInvalidMargins() {
+		// must throw!
+		new CString(String.valueOf("Štefica").toCharArray(), 2, 6);
+	}
+
+	@Test
+	public void testValidMargins1() {
+		CString string = new CString(String.valueOf("Štefica").toCharArray(),
+				1, 6);
+		assertEquals("Expected 'tefica'.", "tefica", string.toString());
+		assertEquals("Expected 't'.", 't', string.charAt(0));
+		assertEquals("Expected 'f'.", 'f', string.charAt(2));
+		assertEquals("Expected 'i'.", 'i', string.charAt(3));
+		assertEquals("Expected 'a'.", 'a', string.charAt(5));
+	}
+
+	@Test
+	public void testValidMargins2() {
+		CString string = new CString(String.valueOf("Štefica").toCharArray(),
+				0, 3);
+		assertEquals("Expected 'Šte'.", "Šte", string.toString());
+		assertEquals("Expected 'Š'.", 'Š', string.charAt(0));
+		assertEquals("Expected 'e'.", 'e', string.charAt(2));
+		assertEquals("Expected 'e'.", 'e', string.charAt(string.length() - 1));
+	}
+
+	@Test
+	public void testValidMargins3() {
+		CString string = new CString(String.valueOf("Štefica").toCharArray(),
+				0, 7);
+		assertEquals("Expected 'Šte'.", "Štefica", string.toString());
+		assertEquals("Expected 'Š'.", 'Š', string.charAt(0));
+		assertEquals("Expected 'e'.", 'e', string.charAt(2));
+		assertEquals("Expected 'a'.", 'a', string.charAt(string.length() - 1));
+	}
+
+	@Test
+	public void testLengthsStartsEnds() {
+		CString string = new CString(String.valueOf("Štefica Štefica Štefica")
+				.toCharArray(), 0, 23);
+		assertEquals("Expected 3x 'Štefica' with whitespaces.",
+				"Štefica Štefica Štefica", string.toString());
+		assertEquals("Expected 23.", 23, string.length());
+		assertEquals("Expected 23.", 23, string.toCharArray().length);
+		assertEquals("Expected ' '.", ' ', string.charAt(7));
+
+		assertEquals("Expected 'true'", true, string.endsWith(new CString(
+				String.valueOf("Štefica").toCharArray(), 0, 7)));
+		assertEquals("Expected 'true'", true, string.startsWith(new CString(
+				String.valueOf("Štefica").toCharArray(), 0, 7)));
+
+		assertEquals("Expected 'false'", false, string.endsWith(new CString(
+				String.valueOf("Šfetica").toCharArray(), 0, 7)));
+		assertEquals("Expected 'false'", false, string.endsWith(new CString(
+				String.valueOf("Šfe").toCharArray(), 0, 3)));
+	}
+
+	@Test
+	public void testLeft() {
+		CString string = new CString(String.valueOf("Štefica Štefica Štefica")
+				.toCharArray(), 0, 23);
+		assertEquals("Expected 'Šte'.", "Šte", string.left(3).toString());
+		assertEquals("Expected 'Štefica '.", "Štefica ", string.left(8)
+				.toString());
+		assertEquals("Expected ''.", "", string.left(0).toString());
+		assertEquals("Expected 'Štefica Štefica Štefica'.",
+				"Štefica Štefica Štefica", string.left(23).toString());
+	}
+
+	@Test
+	public void testRight() {
+		CString string = new CString(String.valueOf("Štefica Štefica Štefica")
+				.toCharArray(), 0, 23);
+		assertEquals("Expected 'ica'.", "ica", string.right(3).toString());
+		assertEquals("Expected ' Štefica'.", " Štefica", string.right(8)
+				.toString());
+		assertEquals("Expected ''.", "", string.right(0).toString());
+		assertEquals("Expected 'Štefica Štefica Štefica'.",
+				"Štefica Štefica Štefica", string.right(23).toString());
+	}
+
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testLeftInvalidIndexes1() {
+		// must throw!
+		new CString(String.valueOf("Štefica Štefica Štefica").toCharArray(), 0,
+				23).left(-1);
+
+	}
+
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testLeftInvalidIndexes2() {
+		// must throw!
+		new CString(String.valueOf("Štefica Štefica Štefica").toCharArray(), 0,
+				23).left(24);
+	}
+
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testRightInvalidIndexes1() {
+		// must throw!
+		new CString(String.valueOf("Štefica Štefica Štefica").toCharArray(), 0,
+				23).right(-1);
+	}
+
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testRightInvalidIndexes2() {
+		// must throw!
+		new CString(String.valueOf("Štefica Štefica Štefica").toCharArray(), 0,
+				23).right(24);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testStartsWithNullValue() {
+		// must throw!
+		new CString(String.valueOf(" Štefica ").toCharArray()).startsWith(null);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testEndsWithNullValue() {
+		// must throw!
+		new CString(String.valueOf("  Štefica  ").toCharArray()).endsWith(null);
+	}
+}

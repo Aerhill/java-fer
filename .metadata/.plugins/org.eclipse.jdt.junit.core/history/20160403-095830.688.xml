@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CStringTests" project="HW04-0036487741" tests="30" started="30" failures="0" errors="0" ignored="0">
+  <testsuite name="hr.fer.zemris.java.cstr.CStringTests" time="0.001">
+    <testcase name="testContainsWithNullValue" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testContainsWithRegularValue" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testReplaceAllWithCStringsAsArguments" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testRightInvalidIndexes1" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testRightInvalidIndexes2" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testRight" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testLeft" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testLeftInvalidIndexes1" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testLeftInvalidIndexes2" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testInvalidMargins" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testFromStringWithNullValue" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testAllWithValidArgumetns" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testStartsWithNullValue" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testReplaceAllWithNullAsValue1" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testReplaceAllWithNullAsValue2" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testReplaceAllWithNullAsValue3" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testAllWithNullValue" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testSubstringWithInvalidArguments1" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testSubstringWithInvalidArguments2" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testSubstringWithInvalidArguments3" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testLengthsStartsEnds" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testSubstringWithValidArguments" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.001"/>
+    <testcase name="testValidMargins1" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testValidMargins2" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testValidMargins3" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testFromStringWithRegularValue" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testRegularCreation" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testEndsWithNullValue" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testNullInputOnFirstConstructor" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+    <testcase name="testReplaceAllWithCharsAsArguments" classname="hr.fer.zemris.java.cstr.CStringTests" time="0.0"/>
+  </testsuite>
+</testrun>
