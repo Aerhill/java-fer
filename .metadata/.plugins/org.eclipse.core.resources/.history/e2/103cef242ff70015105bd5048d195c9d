@@ -1,0 +1,21 @@
+package hr.fer.zemris.java.custom.scripting.elems;
+
+/**
+ * Base class to represent an element of language.
+ * 
+ * @author Ante Spajic
+ *
+ */
+public class Element {
+
+	// All classes inherit this javadoc automatically when class overrides this
+	// method, no need for some tags like {inherit-javadoc} etc.
+	/**
+	 * Returns this elements value text representation.
+	 * 
+	 * @return This elements value as text.
+	 */
+	public String asText() {
+		return "";
+	}
+}
