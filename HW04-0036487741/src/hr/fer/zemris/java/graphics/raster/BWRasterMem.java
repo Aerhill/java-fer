@@ -8,18 +8,28 @@ package hr.fer.zemris.java.graphics.raster;
  */
 public class BWRasterMem implements BWRaster {
 
-	
-	
+	private char[][] raster;
+	private int width;
+	private int height;
+
+	public BWRasterMem(int width, int height) {
+		if (width < 1 || height < 1) {
+			throw new IllegalArgumentException(
+					"Invalid dimension. Width and height must be at least 1");
+		}
+		this.width = width;
+		this.height = height;
+		this.raster = new char[width][height];
+	}
+
 	@Override
 	public int getWidth() {
-		// TODO Auto-generated method stub
-		return 0;
+		return width;
 	}
 
 	@Override
 	public int getHeigth() {
-		// TODO Auto-generated method stub
-		return 0;
+		return height;
 	}
 
 	@Override

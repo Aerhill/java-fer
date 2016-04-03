@@ -165,7 +165,6 @@ public class CString {
 	 */
 	public boolean endsWith(CString s) {
 		return startsWith(s, length - s.length);
-
 	}
 
 	private boolean startsWith(CString s, int index) {

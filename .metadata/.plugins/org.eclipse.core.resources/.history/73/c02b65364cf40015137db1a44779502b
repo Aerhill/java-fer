@@ -1,5 +1,0 @@
-package hr.fer.zemris.java.custom.scripting.elems;
-
-public class ElementOperator extends Element {
-
-}
