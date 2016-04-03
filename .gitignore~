@@ -1,3 +1,11 @@
-/.metadata/version.ini
-/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat
-/.metadata/.plugins/org.eclipse.core.resources/.projects/*/.location
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
