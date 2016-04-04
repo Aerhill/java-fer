@@ -6,5 +6,4 @@ public class Circle extends Ellipse {
 		super(cx, cy, radius, radius);
 	}
 
-	
 }

@@ -11,8 +11,7 @@ public class Demo {
 		System.out.println(cs);
 
 		govno[0] = 'a';
-		// probably the one of the reasons why String implementation changed
-		// Strings werent immutable this way.
+		// achieved the immutability
 		System.out.println(cs);
 	}
 }

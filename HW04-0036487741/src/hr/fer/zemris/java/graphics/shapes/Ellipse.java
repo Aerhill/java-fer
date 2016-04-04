@@ -81,10 +81,19 @@ public class Ellipse extends GeometricShape {
 		this.radiusY = radiusY;
 	}
 
+	/**
+	 * Ellipse specific implementation of checking whether a point is contained
+	 * by the ellipse. Check is done by the formula specified in accepted answer
+	 * on <a
+	 * href="http://math.stackexchange.com/questions/76457/check-if-a-point-is-
+	 * within-an-ellipse#76463"> This site </a>
+	 * 
+	 */
 	@Override
 	public boolean containsPoint(int x, int y) {
-		// TODO Auto-generated method stub
-		return false;
+		return (Math.pow(x - cx, 2) * Math.pow(radiusY, 2) + Math
+				.pow(y - cy, 2) * Math.pow(radiusX, 2)) <= Math.pow(radiusX, 2)
+				+ Math.pow(radiusY, 2);
 	}
 
 }

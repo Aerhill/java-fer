@@ -309,18 +309,18 @@ public class CStringTests {
 				CString.fromString("Ivica"));
 		CString result3 = string1.replaceAll(CString.fromString("medvjed"),
 				CString.fromString("zeko"));
-
+		
 		CString compare1 = CString.fromString("Marica i Marko šetaju šumom.\n"
 				+ "Marko i Marica drže se za ruke.\n"
 				+ "Štefici se sviđa Marko.\n" + "Marku se sviđa Marica.");
 		CString compare2 = CString.fromString("Štefica i Ivica šetaju šumom.\n"
 				+ "Ivica i Štefica drže se za ruke.\n"
 				+ "Štefici se sviđa Ivica.\n" + "Marku se sviđa Štefica.");
-
-		assertEquals("We should be the same.", 0,
-				result1.toString().compareTo(compare1.toString()));
-		assertEquals("We should be the same.", 0,
-				result2.toString().compareTo(compare2.toString()));
+		
+		//System.out.println(result1.length() + " and " + compare1.length());
+		
+		assertEquals("We should be the same.", compare1.toString(), result1.toString());
+		assertEquals("We should be the same.", compare2.toString(), result2.toString());
 		assertEquals("We should be the same.", 0,
 				result3.toString().compareTo(string1.toString()));
 	}

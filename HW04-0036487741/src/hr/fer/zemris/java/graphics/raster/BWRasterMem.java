@@ -8,10 +8,20 @@ package hr.fer.zemris.java.graphics.raster;
  */
 public class BWRasterMem implements BWRaster {
 
-	private char[][] raster;
+	private boolean flipMode = false;
+	private boolean[][] raster;
 	private int width;
 	private int height;
 
+	/**
+	 * Public constructor for Black and white raster that creates a new raster
+	 * with provided dimensions.
+	 * 
+	 * @param width
+	 *            Width of raster
+	 * @param height
+	 *            Height of raster
+	 */
 	public BWRasterMem(int width, int height) {
 		if (width < 1 || height < 1) {
 			throw new IllegalArgumentException(
@@ -19,7 +29,7 @@ public class BWRasterMem implements BWRaster {
 		}
 		this.width = width;
 		this.height = height;
-		this.raster = new char[width][height];
+		this.raster = new boolean[width][height];
 	}
 
 	@Override
@@ -34,38 +44,36 @@ public class BWRasterMem implements BWRaster {
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
-
+		for (int i = 0; i < height; i++) {
+			for (int j = 0; j < width; j++) {
+				raster[i][j] = false;
+			}
+		}
 	}
 
 	@Override
 	public void turnOn(int x, int y) {
-		// TODO Auto-generated method stub
-
+		raster[x][y] = true;
 	}
 
 	@Override
 	public void turnOff(int x, int y) {
-		// TODO Auto-generated method stub
-
+		raster[x][y] = false;
 	}
 
 	@Override
 	public void enableFlipMode() {
-		// TODO Auto-generated method stub
-
+		flipMode = true;
 	}
 
 	@Override
 	public void disableFlipMode() {
-		// TODO Auto-generated method stub
-
+		flipMode = false;
 	}
 
 	@Override
 	public boolean isTurnedOn(int x, int y) {
-		// TODO Auto-generated method stub
-		return false;
+		return raster[x][y];
 	}
 
 }

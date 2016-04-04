@@ -1,6 +1,5 @@
 package hr.fer.zemris.java.cstr;
 
-import java.util.regex.Pattern;
 
 /**
  * Class that represents my implementation of {@link java.util.String} but with
@@ -14,8 +13,8 @@ import java.util.regex.Pattern;
 public class CString {
 
 	private final char[] data;
-	private int length;
-	private int offset;
+	private final int length;
+	private final int offset;
 
 	/**
 	 * 
@@ -63,9 +62,19 @@ public class CString {
 		if (offset > data.length - length) {
 			throw new StringIndexOutOfBoundsException(offset + length);
 		}
-		this.data = data;
+		this.data = new char[offset + length];
+		this.offset = 0;
+		this.length = length;
+		System.arraycopy(data, offset, this.data, 0, length);
+
+	}
+
+	// private constructor used to achieve O(1) complexity in substring with
+	// shared array
+	private CString(int offset, int length, char[] data) {
 		this.offset = offset;
 		this.length = length;
+		this.data = data;
 	}
 
 	/**
@@ -241,7 +250,7 @@ public class CString {
 			throw new StringIndexOutOfBoundsException(newLen);
 		}
 		return ((startIndex == 0 && endIndex == data.length) ? this
-				: new CString(data, offset + startIndex, newLen));
+				: new CString(offset + startIndex, newLen, data));
 	}
 
 	/**
@@ -309,9 +318,40 @@ public class CString {
 	 * @return
 	 */
 	public CString replaceAll(CString oldStr, CString newStr) {
-		String replacement = Pattern.compile(oldStr.toString())
-				.matcher(this.toString()).replaceAll(newStr.toString());
-		char[] newData = replacement.toCharArray();
+		if (!contains(oldStr)) {
+			return this;
+		}
+		int newLen = (length - oldStr.length) + newStr.length + 1;
+		char[] newData = new char[newLen];
+		if (oldStr.toString().equals("")) {
+			for (int i = 0; i < length; i++) {
+				newData[i * length] = data[i];
+				for (int j = 0, k = i * length + 1; j < newStr.length; j++, k++) {
+					newData[k] = newStr.data[j];
+				}
+			}
+		}
+		StringBuilder sb = new StringBuilder();
+		for (int i = offset; i < offset + length ; i++) {
+			if (data[i] == oldStr.data[oldStr.offset]) {
+				// Checking whole sequence
+				int j, z;
+				for (j = oldStr.offset, z = i; j < oldStr.offset
+						+ oldStr.length; j++, z++) {
+					if (data[z] != oldStr.data[j]) {
+						break;
+					}
+				}
+				// Sequence is correct, append new piece.
+				if (j == oldStr.offset + oldStr.length) {
+					sb.append(newStr.toString());
+					// skip the old word
+					i += oldStr.length;
+				}
+			}
+			sb.append(data[i]);
+		}
+		newData = sb.toString().toCharArray();
 		return new CString(newData);
 	}
 }
