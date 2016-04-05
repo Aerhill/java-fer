@@ -18,8 +18,13 @@ public class StringRasterView implements RasterView {
 	
 	@Override
 	public Object produce(BWRaster raster) {
-		// TODO Auto-generated method stub
-		return null;
+		StringBuilder sb = new StringBuilder();
+		for (int x = 0, w = raster.getWidth(), h = raster.getHeigth(); x < h ; x++) {
+			for (int y = 0; y < w; y++) {
+				sb.append(raster.isTurnedOn(x, y) ? onChar : offChar);
+			}
+		}
+		return sb.toString();
 	}
 
 }

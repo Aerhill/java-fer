@@ -29,7 +29,7 @@ public class BWRasterMem implements BWRaster {
 		}
 		this.width = width;
 		this.height = height;
-		this.raster = new boolean[width][height];
+		this.raster = new boolean[height][width];
 	}
 
 	@Override
