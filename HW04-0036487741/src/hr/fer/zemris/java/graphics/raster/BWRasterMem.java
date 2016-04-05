@@ -38,7 +38,7 @@ public class BWRasterMem implements BWRaster {
 	}
 
 	@Override
-	public int getHeigth() {
+	public int getHeight() {
 		return height;
 	}
 
@@ -53,7 +53,11 @@ public class BWRasterMem implements BWRaster {
 
 	@Override
 	public void turnOn(int x, int y) {
-		raster[x][y] = true;
+		if(flipMode && raster[x][y]) {
+			raster[x][y] = false;
+		} else {
+			raster[x][y] = true;
+		}
 	}
 
 	@Override

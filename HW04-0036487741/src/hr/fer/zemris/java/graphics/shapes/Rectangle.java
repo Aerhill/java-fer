@@ -1,7 +1,8 @@
 package hr.fer.zemris.java.graphics.shapes;
 
 /**
- * This class is an implementation of an {@link AbstractRectangle}.
+ * This class is an implementation of an {@link AbstractRectangle} which
+ * represents a rectangle.
  * 
  * @author Ante Spajic
  *

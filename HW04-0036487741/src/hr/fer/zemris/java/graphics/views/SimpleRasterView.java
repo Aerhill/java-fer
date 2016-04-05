@@ -18,7 +18,7 @@ public class SimpleRasterView implements RasterView {
 	
 	@Override
 	public Object produce(BWRaster raster) {
-		for (int x = 0, w = raster.getWidth(), h = raster.getHeigth(); x < h ; x++) {
+		for (int x = 0, w = raster.getWidth(), h = raster.getHeight(); x < h ; x++) {
 			for (int y = 0; y < w; y++) {
 				System.out.print(raster.isTurnedOn(x, y) ? onChar : offChar);
 			}

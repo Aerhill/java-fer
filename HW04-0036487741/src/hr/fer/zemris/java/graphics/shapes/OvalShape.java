@@ -16,6 +16,19 @@ public abstract class OvalShape extends GeometricShape {
 	protected int radiusX;
 	protected int radiusY;
 
+	/**
+	 * This protected constructor is used to create a parent class to the
+	 * classes that extend this shape.
+	 * 
+	 * @param cx
+	 *            Center X coordinate
+	 * @param cy
+	 *            Center Y coordinate
+	 * @param radiusX
+	 *            X axis radius of this shape.
+	 * @param radiusY
+	 *            Y axis radius of this shape.
+	 */
 	protected OvalShape(int cx, int cy, int radiusX, int radiusY) {
 		super();
 		this.cx = cx;
@@ -24,13 +37,60 @@ public abstract class OvalShape extends GeometricShape {
 		this.radiusY = radiusY;
 	}
 
+	/**
+	 * Draws an OvalShape to provided raster.
+	 */
 	@Override
 	public void draw(BWRaster r) {
-		// TODO
-		super.draw(r);
+		int width = r.getWidth();
+		int height = r.getHeight();
+
+		if (cx + radiusX < 0 || cy + radiusY < 0 || cy - radiusY > height
+				|| cx - radiusX > width) {
+			return;
+		}
+		int xStart;
+		if (cx - radiusX > 0) {
+			xStart = cx - radiusX;
+		} else {
+			xStart = 0;
+		}
+		int yStart;
+		if (cy - radiusY > 0) {
+			yStart = cy - radiusY;
+		} else {
+			yStart = 0;
+		}
+
+		for (int i = xStart; i < xStart + 2 * radiusX && i < width; i++) {
+			for (int j = yStart; j < yStart + 2 * radiusY && j < height; j++) {
+				if (this.containsPoint(i, j)) {
+					r.turnOn(i, j);
+				}
+			}
+		}
 	}
-	
+
 	/**
+	 * Ellipse specific implementation of checking whether a point is contained
+	 * by the ellipse. Check is done by the formula specified in accepted answer
+	 * on <a
+	 * href="http://math.stackexchange.com/questions/76457/check-if-a-point-is-
+	 * within-an-ellipse#76463"> This site </a>
+	 * 
+	 */
+	@Override
+	public boolean containsPoint(int x, int y) {
+		int dx = x - cx;
+		int dy = y - cy;
+		int rY = radiusY * radiusY;
+		int rX = radiusX * radiusX;
+		return (dx * dx * rY + dy * dy * rX) <= rY + rX;
+	}
+
+	/**
+	 * Returns the center's X coordinate of this OvalShape
+	 * 
 	 * @return the cx
 	 */
 	public int getCx() {
@@ -38,6 +98,8 @@ public abstract class OvalShape extends GeometricShape {
 	}
 
 	/**
+	 * Set a new center X coordinate of this OvalShape
+	 * 
 	 * @param cx
 	 *            the cx to set
 	 */
@@ -46,6 +108,8 @@ public abstract class OvalShape extends GeometricShape {
 	}
 
 	/**
+	 * Returns the center's Y coordinate of this OvalShape
+	 * 
 	 * @return the cy
 	 */
 	public int getCy() {
@@ -53,6 +117,8 @@ public abstract class OvalShape extends GeometricShape {
 	}
 
 	/**
+	 * Set a new center Y coordinate of this OvalShape
+	 * 
 	 * @param cy
 	 *            the cy to set
 	 */
@@ -97,21 +163,5 @@ public abstract class OvalShape extends GeometricShape {
 	public void setRadiusY(int radiusY) {
 		this.radiusY = radiusY;
 	}
-	
-	/**
-	 * Ellipse specific implementation of checking whether a point is contained
-	 * by the ellipse. Check is done by the formula specified in accepted answer
-	 * on <a
-	 * href="http://math.stackexchange.com/questions/76457/check-if-a-point-is-
-	 * within-an-ellipse#76463"> This site </a>
-	 * 
-	 */
-	@Override
-	public boolean containsPoint(int x, int y) {
-		int dx = x - cx;
-		int dy = y - cy;
-		int rY = radiusY * radiusY;
-		int rX = radiusX * radiusX;
-		return (dx*dx * rY + dy*dy * rX) <= rY + rX;
-	}
+
 }

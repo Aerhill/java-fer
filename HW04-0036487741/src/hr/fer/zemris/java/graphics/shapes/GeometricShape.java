@@ -23,7 +23,7 @@ public abstract class GeometricShape {
 	 *            Raster to draw the picture on.
 	 */
 	public void draw(BWRaster r) {
-		for (int x = 0, h = r.getHeigth(), w = r.getWidth(); x < h; x++) {
+		for (int x = 0, h = r.getHeight(), w = r.getWidth(); x < h; x++) {
 			for (int y = 0; y < w; y++) {
 				if (containsPoint(x, y)) {
 					r.turnOn(x, y);

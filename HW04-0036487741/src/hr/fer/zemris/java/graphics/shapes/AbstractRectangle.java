@@ -3,7 +3,8 @@ package hr.fer.zemris.java.graphics.shapes;
 import hr.fer.zemris.java.graphics.raster.BWRaster;
 
 /**
- * 
+ * Intermediate class that represents any kind of Rectangle, in our case we have
+ * 2 classes, Rectangle and Square, that inherit from this one.
  * 
  * @author Ante Spajic
  *
@@ -30,12 +31,12 @@ public abstract class AbstractRectangle extends GeometricShape {
 	public void draw(BWRaster r) {
 		if (x + width <= 0 || x >= r.getWidth())
 			return;
-		if (y + height <= 0 || y >= r.getHeigth())
+		if (y + height <= 0 || y >= r.getHeight())
 			return;
 		int fromX = Math.max(0, x);
 		int toX = Math.min(x + width, r.getWidth());
 		int fromY = Math.max(0, y);
-		int toY = Math.min(y + height, r.getHeigth());
+		int toY = Math.min(y + height, r.getHeight());
 		for (int y = fromY; y < toY; y++) {
 			for (int x = fromX; x < toX; x++) {
 				r.turnOn(x, y);
@@ -121,8 +122,10 @@ public abstract class AbstractRectangle extends GeometricShape {
 
 	@Override
 	public boolean containsPoint(int x, int y) {
-		if (x < this.x || x >= this.x + width) return false;
-		if (y < this.y || y >= this.y + height) return false;
+		if (x < this.x || x >= this.x + width)
+			return false;
+		if (y < this.y || y >= this.y + height)
+			return false;
 		return true;
 	}
 
