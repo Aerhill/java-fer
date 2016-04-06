@@ -1,5 +1,0 @@
-package hr.fer.zemris.java.graphics.shapes;
-
-public abstract class GeometricShape {
-
-}

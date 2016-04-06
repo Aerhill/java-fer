@@ -1,5 +1,0 @@
-package hr.fer.zemris.java.graphics.raster;
-
-public interface BWRaster {
-
-}
