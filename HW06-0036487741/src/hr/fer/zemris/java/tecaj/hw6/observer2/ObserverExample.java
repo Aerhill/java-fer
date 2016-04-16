@@ -1,4 +1,4 @@
-package hr.fer.zemris.java.tecaj.hw6.observer1;
+package hr.fer.zemris.java.tecaj.hw6.observer2;
 
 public class ObserverExample {
 
