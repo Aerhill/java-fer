@@ -1,0 +1,152 @@
+package hr.fer.zemris.java.tecaj.hw5.db;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import hr.fer.zemris.java.tecaj.hw5.db.expression.CompositeConditionalExpression;
+import hr.fer.zemris.java.tecaj.hw5.db.expression.ConditionalExpression;
+import hr.fer.zemris.java.tecaj.hw5.db.expression.IConditionalExpression;
+import hr.fer.zemris.java.tecaj.hw5.db.getter.FirstNameFieldGetter;
+import hr.fer.zemris.java.tecaj.hw5.db.getter.IFieldValueGetter;
+import hr.fer.zemris.java.tecaj.hw5.db.getter.JmbagFieldGetter;
+import hr.fer.zemris.java.tecaj.hw5.db.getter.LastNameFieldGetter;
+import hr.fer.zemris.java.tecaj.hw5.db.operator.EqualsCondition;
+import hr.fer.zemris.java.tecaj.hw5.db.operator.GreaterEqualsThanCondition;
+import hr.fer.zemris.java.tecaj.hw5.db.operator.GreaterThanCondition;
+import hr.fer.zemris.java.tecaj.hw5.db.operator.IComparisonOperator;
+import hr.fer.zemris.java.tecaj.hw5.db.operator.LikeCondition;
+import hr.fer.zemris.java.tecaj.hw5.db.operator.NotEqualsCondition;
+import hr.fer.zemris.java.tecaj.hw5.db.operator.SmallerEqualsThanCondition;
+import hr.fer.zemris.java.tecaj.hw5.db.operator.SmallerThanCondition;
+
+/**
+ * This class is used for parsing an entered database query, this class does
+ * both jobs of lexing and parsing, this class takes an entered query command
+ * and generates an {@link IConditionalExpression} for {@link QueryFilter} to
+ * execute on a database.
+ * 
+ * @author Ante Spajic
+ *
+ */
+public class QueryParser {
+
+	/**
+	 * Generated expression to be executed on a database.
+	 */
+	private IConditionalExpression expression;
+
+	/**
+	 * Public constructor that takes an entered query command and parses an
+	 * expression to be executed by a {@link QueryFilter} on a
+	 * {@link StudentDatabase}
+	 * 
+	 * @param query
+	 *            Query command to be parsed
+	 */
+	public QueryParser(String query) {
+		if (!query.trim().startsWith("query")) {
+			throw new IllegalArgumentException("Invalid expression");
+		}
+		String kveri = query.replaceFirst("query", "").trim();
+		String[] exprs = kveri.split("\\s+(?i)and\\s+");
+		List<IConditionalExpression> generatedExpressions = new ArrayList<>();
+		for (String expr : exprs) {
+			generatedExpressions.add(createExpression(expr));
+		}
+
+		if (generatedExpressions.size() > 1) {
+			this.expression = new CompositeConditionalExpression(generatedExpressions.toArray(new IConditionalExpression[0]));
+		} else {
+			this.expression = generatedExpressions.get(0);
+		}
+	}
+
+	/**
+	 * Private method that analyzes an entered command and if command is valid
+	 * an instance {@link IConditionalExpression} is created and stored in
+	 * variable expression which can be obtained by the user.
+	 * 
+	 * @param expr
+	 *            Query expression
+	 * @return Generated conditional expression which can be executed on a
+	 *         StudentDatabase.
+	 */
+	private IConditionalExpression createExpression(String expr) {
+		// look at me I am meeseek
+		Pattern pattern = Pattern
+				.compile("\\s*(firstName|lastName|jmbag)\\s*(<=|>=|=|<|>|!=|LIKE)\\s*\"([-a-zA-Z0-9*ČčĆćĐđŠšŽž\\s]+)\"");
+		Matcher matcher = pattern.matcher(expr);
+
+		if (matcher.find()) {
+			IFieldValueGetter field = getField(matcher.group(1).trim());
+			IComparisonOperator operator = getOperator(matcher.group(2).trim());
+			String literal = matcher.group(3);
+			return new ConditionalExpression(field, literal, operator);
+		} else {
+			throw new IllegalArgumentException("Invalid expression");
+		}
+
+	}
+
+	/**
+	 * Helper method that generates valid strategy instance based on an user
+	 * input.
+	 * 
+	 * @param input
+	 *            Operator that user provided.
+	 * @return An instance of {@link IComparisonOperator} strategy pattern.
+	 */
+	private IComparisonOperator getOperator(String input) {
+		switch (input) {
+		case "<=":
+			return new SmallerEqualsThanCondition();
+		case "<":
+			return new SmallerThanCondition();
+		case ">=":
+			return new GreaterEqualsThanCondition();
+		case ">":
+			return new GreaterThanCondition();
+		case "!=":
+			return new NotEqualsCondition();
+		case "=":
+			return new EqualsCondition();
+		case "LIKE":
+			return new LikeCondition();
+		default:
+			throw new UnsupportedOperationException("Unsupported operation");
+		}
+	}
+
+	/**
+	 * Helper method that generates a valid instance strategy pattern for
+	 * getting a proper field value from a {@link StudentRecord}
+	 * 
+	 * @param field
+	 *            StudentRecord field to be obtained.
+	 * @return An instance of {@link IFieldValueGetter} strategy pattern.
+	 */
+	private IFieldValueGetter getField(String field) {
+		switch (field.toLowerCase()) {
+		case "firstname":
+			return new FirstNameFieldGetter();
+		case "lastname":
+			return new LastNameFieldGetter();
+		case "jmbag":
+			return new JmbagFieldGetter();
+		default:
+			throw new IllegalArgumentException("Invalid fijeld");
+		}
+	}
+
+	/**
+	 * Returns an expression generated by this parser that can be executed on a
+	 * {@link StudentDatabase}.
+	 * 
+	 * @return Generated Conditional expression.
+	 */
+	public IConditionalExpression getExpression() {
+		return expression;
+	}
+}
