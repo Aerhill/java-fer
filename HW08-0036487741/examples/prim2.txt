@@ -1,0 +1,36 @@
+# Program pita korisnika za broj te ispisuje sljedećih 5 brojeva nakon unešenog broja.
+  load r6, @poruka
+  load r7, @poruka2
+  load r8, @enter
+  load r9, @uspjeh
+  call @potprogram
+  call @potprogram
+  halt
+
+@potprogram:  echo r6
+  iinput @input
+  jumpIfTrue @ispis
+  echo r7
+  jump @potprogram
+@kraj:  ret
+
+@ispis: move r0, 0
+	  load r1, @brojac
+	  load r2, @input
+	  echo r9
+@petlja: testEquals r0, r1
+	  	jumpIfTrue @kraj
+	  	increment r2
+	  	increment r0
+	  	echo r2
+	  	echo r8
+	  	jump @petlja
+
+@input: RESERVE
+		RESERVE:19		; rezerviramo 19 lokacija u memoriji
+@stackTop:	RESERVE		; rezerviramo još jednu, ukupno 20 lokacija; ova postaje vrh stoga
+@brojac: 	DEFINT 5 ; konstanta - brojac
+@enter: 	DEFSTR "\n"
+@poruka:  DEFSTR "Unesite početni broj: " ; pozdravna poruka
+@uspjeh:  DEFSTR "Sljedećih 5 brojeva je:\n"
+@poruka2: DEFSTR "Unos nije moguće protumačiti kao cijeli broj.\n" ; poruka u slučaju greške

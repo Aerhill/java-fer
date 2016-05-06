@@ -1,0 +1,53 @@
+#Program ispisuje sljedećih n-ti fibonaccijev broj (najvise 15-ti)
+			jump @start				; ovo je instrukcija na adresi 0
+@nula:		DEFINT 0				; nula za usporedbu 
+@jedan:		DEFINT 1				; jedan za usporedbu
+@lokacija:	DEFINT 0				; učitani cijeli broj
+
+#Poruka za ispis na standardni izlaz
+@msg1:		DEFSTR "Unesite cijeli broj: "
+@msg2:		DEFSTR "Unos nije moguće protumačiti kao cijeli broj.\n"
+@msg3:		DEFSTR "Zatraženi fibonnacijev broj je: "
+
+@start:		move r8, 4				; r8 ce bit "pointer" na poruke
+			echo [r8]				; ispisi @msg1
+			iinput @lokacija		; pitaj korisnika broj
+			jumpIfTrue @ispisi		; ako je valjan, kreni ispisivat 
+			echo [r8+1]				; ispisi da nije valjan
+			jump @start				; pitaj korisnika ponovno
+
+@ispisi:	load r0, @nula			; f(0) = 0 (1. osnovni slučaj rekurzije)
+			load r1, @jedan			; f(1) = 1 (2. osnovni slučaj rekurzije)
+			load r2, @lokacija		; učitaj broj u r2
+			load r3, @nula			; r3 će zbrajati riješenja
+			
+			push r2
+			call @fibo
+			echo [r8+2]
+			echo r3
+			halt
+			
+@fibo:		move r2, [r15+2]		; učitaj parametar sa stoga
+			testEquals r2, r0		; usporedi s osnovnim slučajem 1
+			jumpIfTrue @fibo0		; ako je 0 vrati 0
+			testEquals r2, r1		; usporedi s osnovnim slučajem 2
+			jumpIfTrue @fibo1		; ako je 1 vrati 1
+			
+			decrement r2			
+			push r2
+			call @fibo				; f(n-1)
+			pop r2
+			
+			decrement r2
+			push r2
+			call @fibo				; f(n-2)
+			pop r2
+			
+			ret
+			
+@fibo1: 	increment r3
+@fibo0:		ret
+
+# Slijedi mjesto predviđeno za stog (30 mem. lokacija)
+			RESERVE:29
+@stackTop:	RESERVE
