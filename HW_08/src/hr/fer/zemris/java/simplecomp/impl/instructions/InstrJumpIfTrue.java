@@ -27,10 +27,10 @@ import hr.fer.zemris.java.simplecomp.models.InstructionArgument;
 public class InstrJumpIfTrue implements Instruction {
 
 	/**
-	 * lokacija na koju želimo "skočiti"
+	 * Instrukcija koja izvršava skok
 	 */
-	private int location;
-
+	private InstrJump jump;
+	
 	/**
 	 * Javni konstruktor instrukcije koja prima listu čija je valjana veličina 1
 	 * čiji element je memorijska lokacija na koju želimo skočiti.
@@ -39,19 +39,13 @@ public class InstrJumpIfTrue implements Instruction {
 	 *            lista koja sadrži memorijsku lokaciju na koju želimo skočiti
 	 */
 	public InstrJumpIfTrue(List<InstructionArgument> arguments) {
-		if (arguments.size() != 1) {
-			throw new IllegalArgumentException("Expected 1 argument");
-		}
-		if (!arguments.get(0).isNumber()) {
-			throw new IllegalArgumentException("Invalid memory location, must be a number");
-		}
-		this.location = (Integer) arguments.get(0).getValue();
+		jump = new InstrJump(arguments);
 	}
 
 	@Override
 	public boolean execute(Computer computer) {
 		if (computer.getRegisters().getFlag()) {
-			computer.getRegisters().setProgramCounter(location);
+			jump.execute(computer);
 		}
 		return false;
 	}
