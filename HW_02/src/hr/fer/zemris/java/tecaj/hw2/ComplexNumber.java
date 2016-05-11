@@ -95,6 +95,7 @@ public class ComplexNumber {
 		} else {
 			if (s.endsWith("i")) {
 				s = s.replaceAll("i", "");
+				s = s.trim().length() == 0 ? "1" : s;
 				parsed = fromImaginary(Double.parseDouble(s));
 			} else {
 				parsed = fromReal(Double.parseDouble(s));
