@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.GridLayout;
-import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -18,35 +17,35 @@ import javax.swing.WindowConstants;
 
 public class Prozor6 extends JFrame {
 
-	private static final long serialVersionUID = -8826341685279647668L;
+	private static final long serialVersionUID = 1L;
+
 
 	public Prozor6() {
-		super();
+		setLocation(20, 50);
+		setSize(300, 200);
+		setTitle("Moj prvi prozor!");
 		setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-		setTitle("Prozor1");
-		setLocation(20, 20);
-		setSize(500, 200);
-		initGui();
-
+		
+		initGUI();
 	}
-
-	private void initGui() {
+	
+	private void initGUI() {
 		Container cp = getContentPane();
 		cp.setLayout(new BorderLayout());
-
-		JLabel labela = new JLabel("<html>Ovo je <i><font color='red'>Labela</font></i></html>");
+		
+		JLabel labela = new JLabel(" ");
+		labela.setHorizontalAlignment(SwingConstants.CENTER);
 		labela.setOpaque(true);
 		labela.setBackground(Color.YELLOW);
-		labela.setHorizontalAlignment(SwingConstants.CENTER);
 
 		JPanel bottomPanel = new JPanel(new GridLayout(1, 0));
 
 		bottomPanel.add(new JLabel("Unesi broj: "));
-
+		
 		JTextField unosBroja = new JTextField();
 		bottomPanel.add(unosBroja);
 		
-		JButton izracunaj = new JButton("Izracunaj");
+		JButton izracunaj = new JButton("Izračunaj");
 		bottomPanel.add(izracunaj);
 		
 		izracunaj.addActionListener(e -> {
@@ -54,21 +53,28 @@ public class Prozor6 extends JFrame {
 		});
 		
 		cp.add(labela, BorderLayout.CENTER);
-		cp.add(bottomPanel, BorderLayout.SOUTH);
+		cp.add(bottomPanel, BorderLayout.PAGE_END);
 	}
 
 	private void obradi(JLabel labela, String text) {
 		try {
 			double broj = Double.parseDouble(text);
 			labela.setText(Double.toString(broj*broj));
-		} catch (NumberFormatException e) {
-			JOptionPane.showMessageDialog(this, "Nisam mogao pretvoriti " + text + " u broj");
+		} catch(NumberFormatException ex) {
+			JOptionPane.showMessageDialog(
+				this, 
+				"Tekst "+text+" ne mogu pretvoriti u broj.", 
+				"Pogreška", 
+				JOptionPane.ERROR_MESSAGE);
 		}
 	}
-	
+
 	public static void main(String[] args) {
+
 		SwingUtilities.invokeLater(() -> {
-			new Prozor6().setVisible(true);
+			JFrame frame = new Prozor6();
+			frame.pack();
+			frame.setVisible(true);
 		});
 	}
 }

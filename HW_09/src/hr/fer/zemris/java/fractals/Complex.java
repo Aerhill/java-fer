@@ -218,4 +218,12 @@ public class Complex {
 			return re + " - " + (-im) + "i";
 		return re + " + " + im + "i";
 	}
+
+	public void setReal(double re) {
+		this.re = re;
+	}
+
+	public void setImaginary(double im) {
+		this.im = im;
+	}
 }
