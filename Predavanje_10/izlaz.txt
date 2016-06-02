@@ -1,0 +1,707 @@
+HTTP/1.1 200 OK
+Date: Sat, 28 May 2016 08:52:59 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 39961
+Connection: close
+Set-Cookie: __cfduid=dec6151146f931143957100dc6d3fde241464425579; expires=Sun, 28-May-17 08:52:59 GMT; path=/; domain=.index.hr; HttpOnly
+Cache-Control: private
+Set-Cookie: ASP.NET_SessionId=elo3q4gad3waqkp0fueg3q20; domain=.index.hr; path=/; HttpOnly
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Set-Cookie: serverIndex=xi|V0lcX; path=/
+Server: cloudflare-nginx
+CF-RAY: 2aa0793e2c5b392e-VIE
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" xml:lang="hr" lang="hr">
+
+<head><title>
+	Karamarko - put jednog špijuna - Vijesti - Index.hr
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><meta http-equiv="Cache-Control" content="no-cache" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1;" /><meta property="fb:app_id" content="216060115209819" /><link rel="stylesheet" href="/css/index_2009_1.3.css?v=1.0" type="text/css" media="screen" />
+	<!--[if lt IE 7]>
+        <link rel="stylesheet" href="/css/index_2009_1.0_ie.css" type="text/css" media="screen" />
+        <![endif]-->
+	<script type="text/javascript" src="/scripts/jquery-1.4.20.min.js"></script>
+	<script type="text/javascript" src="/scripts/cufon.1.09.js"></script>
+	<script type="text/javascript" src="/scripts/Cn_BT_700.js"></script>
+	<script src="/js/AC_OETags.js" type="text/javascript"></script>
+	<script src="/video/controls/player/mediaplayer-5.3-licensed/jwplayer.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		Cufon.replace('h1');
+		Cufon.replace('h2');
+		Cufon.replace('h3');
+		Cufon.replace('h5');
+		Cufon.DOM.ready(function () {
+			Cufon.replace(document.getElementById('mainmenu').getElementsByTagName('a'));
+			Cufon.replace(document.getElementById('submenu').getElementsByTagName('a'));
+		});
+	</script>
+
+	<script type='text/javascript'>
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+		(function () {
+			var gads = document.createElement('script');
+			gads.async = true;
+			gads.type = 'text/javascript';
+			var useSSL = 'https:' == document.location.protocol;
+			gads.src = (useSSL ? 'https:' : 'http:') +
+			'//www.googletagservices.com/tag/js/gpt.js';
+			var node = document.getElementsByTagName('script')[0];
+			node.parentNode.insertBefore(gads, node);
+		})();
+	</script>
+
+
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@indexhr" />
+	<meta name="description" content='BIOGRAFIJA šefa HDZ-a prepunna je preokreta i promjene strana. Jedina konstanta su tajne službe.' />
+
+	<meta property="og:description" content='BIOGRAFIJA šefa HDZ-a prepunna je preokreta i promjene strana. Jedina konstanta su tajne službe.' />
+	<meta property="og:type" content="article" />
+
+	<meta property="og:title" content='Karamarko - put jednog špijuna' />
+	<meta property="og:image" content='http://www.index.hr/images2/mazoccokaramarkospijun.jpg' />
+	<meta property="og:url" content='http://www.index.hr/vijesti/clanak/permalink/895896.aspx' />
+	<script type="text/javascript" src="/vijesti/js/hscroll2.js"></script>
+	<link rel="Stylesheet" href="/js/prettyPhoto/css/prettyPhoto.css" />
+	<script type="text/javascript" src="/js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+
+	<script type='text/javascript'>
+		var OA_zones = {
+			"Billboard": 5,
+			"Wallpaper": 3,
+			"300x250A": 6,
+			"300x250B": 7,
+			"300x250C": 8,
+			"300x250_Ispod_clanka_A": 12,
+			"300x250_Ispod_clanka_B": 13,
+			"InArticle": 14,
+			"Header": 15
+		}
+	</script>
+	<script type='text/javascript' src='http://epp.index.hr/www/delivery/spcjs.php?page=vijesti&nsfw=False'></script>
+
+</head>
+
+<body>
+
+
+	
+	<div style="width: 990px; margin: 0px auto; text-align: center">
+		<script type="text/javascript">
+			OA_show('Billboard');
+		</script>
+	</div>
+
+
+	<div id="fb-root"></div>
+	<script type="text/javascript">
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0&appId=216060115209819";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<form method="post" action="./895896.aspx?id=895896&amp;naziv=karamarko--put-jednog-spijuna" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODI1MTIwMzI1ZGQuLsB82mumrFCtclIt9kcF/RU5Hw==" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="665A6001" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAKLVdW8gYeffIQOSb6lZRldlrjzRO+h6mZy2e9t6alfrc+37a1EvwaVXaUZav9dS9xG5bfH" />
+		<div id="main_container">
+
+			<div class="content_wrapper">
+
+				<!-- begin header -->
+				<div id="mainheader" class="mainheadervijesti">
+					<ul id="mainmenu">
+						<li><a href="/" id="mnu_naslovnica" style="border-left: 0px">Naslovnica</a></li>
+						<li><a href="/vijesti/" id="mnu_vijesti">Vijesti</a></li>
+						<li><a href="/sport/" id="mnu_sport">Sport</a></li>
+						<li><a href="/black/" id="mnu_xmag">Black</a></li>
+						<li><a href="/rouge/" id="mnu_rouge">Rouge</a></li>
+						<li><a href="/xmag/nightlife/" id="mnu_nightlife">Nightlife</a></li>
+						<li><a href="/indexforum/" id="mnu_klub">Forum(beta)</a></li>
+						<li><a href="/forum/" id="mnu_forum">Forum</a></li>
+						<li><a href="/video/" id="mnu_video">Video</a></li>
+
+						<li><a href="http://www.bloger.hr/">Bloger</a></li>
+						<li><a href="http://www.igra.hr/">Igra</a></li>
+						<li><a href="/info/vrijeme/" id="mnu_info">Info</a></li>
+					</ul>
+					<a id="mainlink" href="/" style="position: absolute; top: 0px; left: 0px; width: 105px; height: 50px"></a>
+					<div style="clear: both"></div>
+
+					
+	<div id="submenucontainerholder_vijestisubmenu_submenucontainer"><ul id="submenu"><li><a href="/vijesti/">VIJESTI</a><li><a href="/vijesti/rubrika/hrvatska/22.aspx">Hrvatska</a></li><li><a href="/vijesti/rubrika/zagreb/1553.aspx">Zagreb</a></li><li><a href="/vijesti/rubrika/regija/1540.aspx">Regija</a></li><li><a href="/vijesti/rubrika/svijet/23.aspx">Svijet</a></li><li><a href="/vijesti/rubrika/crna-kronika/46.aspx">Crna kronika</a></li><li><a href="/vijesti/komentatori/">Komentari</a></li><li><a href="/novac">Novac</a></li></ul></div>
+
+
+					<div style="clear: both"></div>
+
+					<div class="masterloginregister">
+						<a class="login" href="/indexklub/">Login</a>
+						<a class="register" href="/indexklub/">Register</a>
+						<a class="homepage" href="#">Postavi za homepage</a>
+					</div>
+
+					<div class="masterpagesearch">
+						<img src="/img2009/btnsearch.gif" style="border: 0px; float: right" onclick="document.location.href='/trazi.aspx?upit=' + escape(document.getElementById('textmastersearch').value)" /><input class="textbox" id="textmastersearch" type="text" value="Upišite tekst za pretragu..." onkeydown="if(event.which || event.keyCode) {if ((event.which == 13) || (event.keyCode == 13)){document.location.href='/trazi.aspx?upit=' + this.value}}" onclick="this.value = ''" onblur="if (this.value==''){this.value='Upišite tekst za pretragu...'}" />
+					</div>
+
+				</div>
+				<!-- end header -->
+
+				<br />
+
+				<!-- banner rotator - top banner -->
+				
+				
+				<!-- end banner rotator -->
+
+
+				<!-- begin content -->
+				
+	<div style="width: 990px; margin: 0px auto; text-align: center">
+		<script type="text/javascript">
+			OA_show('Header');
+		</script>
+	</div>
+
+
+	<div style="position: relative; zoom: 1" class="indexvijesti">
+		<div id="article_overtitle">
+			
+		</div>
+
+		<div id="article_title">
+			<div id="article_title_inner">
+				<h1>
+					Karamarko - put jednog špijuna</h1>
+				<div id="ContentPlaceHolder1_article_title_news" class="article_title_news"></div>
+
+				<div style="clear: both"></div>
+			</div>
+		</div>
+
+
+
+		<div class="columnleft_wrapper">
+			<div class="columnleft">
+
+				<div class="writer">
+					Piše: <strong>
+						Vojislav Mazzocco</strong><br />
+					Objavljeno prije 15 minuta
+				</div>
+				<div style="float: left; padding: 8px">
+					<div id="fb-root"></div>
+
+					<iframe src="http://www.facebook.com/plugins/share_button.php?href=http://www.index.hr/vijesti/clanak/karamarko--put-jednog-spijuna/895896.aspx&layout=button_count&appId=216060115209819&display=popup" width="100" height="20" frameborder="0"></iframe>
+				</div>
+
+
+				<div style="float: left; padding: 9px; overflow: hidden; position: relative; display: none">
+
+					<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+					<!--script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script-->
+
+				</div>
+
+
+				<div style="clear: both"></div>
+
+
+				<div id="article_text_sizer">
+					<a href="#fs-" onclick="changeFontSize(document.getElementById('article_text'),-1,13)">
+						<img src="/img2009/btnminus.gif" style="border: 0px" alt="Smanji veličinu slova" /></a> Tekst <a href="#fs+" onclick="changeFontSize(document.getElementById('article_text'),1,13)">
+							<img src="/img2009/btnplus.gif" style="border: 0px" alt="Povećaj veličinu slova" /></a>
+				</div>
+
+
+
+				<div id="article_tabs_content">
+
+					<br />
+
+
+
+					<div id="article_text">
+
+
+						<div style="margin-bottom: 3px">
+							<img id="ContentPlaceHolder1_articleimage" src="http://www.index.hr/images2/mazoccokaramarkospijun.jpg" alt="Karamarko - put jednog špijuna" border="1" />
+						</div>
+
+						
+
+						<script type="text/javascript">
+							$(document).ready(function () {
+								$("a[rel^='lightbox']").prettyPhoto();
+							});
+
+						</script>
+
+
+
+
+						
+
+						<p><span style="color: rgb(128, 128, 128);">Foto: Hina, Index</span></p>
+<p>TOMISLAV KARAMARKO bio bi najsretniji kada bi njegova politička biografija počela 2008. godine. Tada ga je Ivo Sanader, kao spasitelja, pozvao iz Sigurnosno &ndash; obavje&scaron;tajne agencije i instalirao na mjesto ministra unutra&scaron;njih poslova. U jesen 2008. godine na kućnim je stubama ubijena Ivana Hodak, kći jednog od tada najmoćnijeg domaćeg odvjetnika.</p>
+<p>&quot;&Scaron;to se tiče kadrovskih promjena, neka se shvati odlučnost da ćemo se isto tako odlučno obračunati s organiziranim kriminalom i onima koji na jedan ili drugi način poku&scaron;avaju sugerirati da je Hrvatska mafija&scaron;ka zemlja&quot;, rekao je tada Sanader.</p>
+<p>&quot;A &scaron;to ako se pokaže da ovo nije mafija&scaron;ko ubojstvo&quot;,&nbsp; pitanjem je novinarima odgovorio Karamarko nekoliko trenutaka kasnije. I bio u pravu. Za ubojstvo Ivane Hodak, ubojstvo koje ga je dovelo u Vladu, osuđen je beskućnik. Iako je dotad bio prvi &scaron;pijun u Hrvata, Karamarko je prvi put u&scaron;ao u stvarnu izvr&scaron;nu vlast.</p>
+<p><strong>Žrtva represije</strong></p>
+<p>Tomislav Karamarko rođen je 1959. u Zadru, odrastao je u Kru&scaron;evu pokraj Obrovca, gdje je i zavr&scaron;io osnovnu &scaron;kolu. Obitelj Karamarko u &scaron;ezdesetima seli u Zagreb, na Pe&scaron;ćenicu, a Tomislav nakon zavr&scaron;ene srednje &scaron;kole upisuje povijest na Filozofskom fakultetu. Zapravo je prvo želio studirati pravo, ali mu nije i&scaron;lo. Prvi posao dobio je u Državnom arhivu na odjelu Kaptolski depozit. Jo&scaron; kao studentu, navodno zbog katoličkih aktivnosti, Karamarku je oduzeta putovnica i on se i dan-danas prikazuje kao žrtva represivnog aparata države na umoru. Josip Manolić, pak, tvrdi da je Karamarko zapravo bio suradnik jugoslavenske tajne službe koja ga je ucijenila zbog sudjelovanja u sitnom kriminalu. Manolićeve tvrdnje predmet su sudskog spora. Kakva god da istina bila Karamarko se od tih posljednjih formativnih godina neprestano susretao s tajnim službama i očito osjeća posebno naklonost prema skrivenim operacijama i obavje&scaron;tajnom radu.</p>
+<p>Hrvatska demokratska zajednica osnovana je 1989. godine i Karamarko se odmah uključio u njen rad. Za to je dvije godine kasnije nagrađen mjestom &scaron;efa kabineta predsjednika vlade Josipa Manolića, a kasnije i Franje Gregurića. Neko vrijeme je bio i &scaron;ef kabineta predsjednika Sabora Stjepana Mesića s kojim će se Karamarkova karijera jo&scaron; puno puta susretati ili sudarati, ovisno o točki gledi&scaron;ta.<strong><br />
+</strong></p>
+<p><strong>Dolazak u policiju&nbsp; </strong></p>
+<p>S političko-birokratskog mjesta u Vladi i Saboru Karamarko usred rata, 1993. godine, postaje načelnik zagrebačke policije. Danas se hvali da je tada pokrenuo prve istrage o sumnjivim privatizacijama. Očito u tome nije bio pretjerano uspje&scaron;an jer su se privatizacijske malverzacije nastavile. HDZ-ovim tajkunima nisu se ba&scaron; tresle gaće od Karamarkovih istraga. Usprkos, ili zahvaljujući, tome napreduje u policijskoj hijerarhiji pa je dvije godine pomoćnik ministra unutarnjih poslova, sve do prvog razlaza s HDZ-om 1998. godine.</p>
+<p>Franjo Tuđman umire 1999. godine, malo prije već zakazanih parlamentarnih izbora na kojima je opozicija ujedinjeno juri&scaron;ala na njihovu desetljetnu vladavinu. Umirovljeni i već pomalo zaboravljeni HDZ-ov disident Stjepan Mesić osjetio je svoju &scaron;ansu i kandidirao se na izvanrednim predsjedničkim izborima. Krenuo je praktički od nule i na koncu potukao i Dražena Budi&scaron;u, iza kojeg je stajala ujedinjena opozicija, i Matu Granića, kojeg je kandidirao HDZ. &Scaron;ef Mesićevog izbornog stožera bio je Tomislav Karamarko. Mesić je svoju kampanju sagradio na žestokoj kritici HDZ-a i Tuđmana, &scaron;to Karamarku tada nije nimalo smetalo. Dapače, i sam je u javnim istupima dijelio Mesićeve stavove. Uspje&scaron;no odrađen posao na kampanji nagrađen je mjestom savjetnika za nacionalnu sigurnost pa je Karamarko ponovno zaronio u &scaron;pijunske tajne. Dok se 2002. godine nije razi&scaron;ao s Mesićem iz ureda predsjednika Republike iza&scaron;li su brojni dokumenti s oznakom tajno. Neki prema Haa&scaron;kom sudu, a neki prema novinama, pogotovo prema Nacionalu koji je tada vodio Ivo Pukanić.</p>
+<p>Nakon odlaska s Pantovčaka Karamarko se oku&scaron;ao u privatnom biznisu. Osnovao je tvrtku Soboli koja se, gle čuda, bavila upravo obavje&scaron;tajnim radom. Za razne naručitelje izrađivali su sigurnosne procjene, pravilnike, političko-obavje&scaron;tajne analize. Jedan od dražih klijenata Karamarkove tvrtke Soboli bila je naftna kompanija INA, ali nisu odbijali poslove ni s drugim državnim tvrtkama. Od samog početka govorkalo se da Soboli koristi usluge i resurse državnih obavje&scaron;tajaca, a podudarnosti u stilu, načinu, izgledu dokumenata pa čak i specifičnim informacijama tome su snažno i&scaron;le u prilog. Karamarko je, naravno, takve optužbe uvijek odlučno odbijao. Na trži&scaron;tu se Karamarko kratko zadržao, svega dvije godine. Imenovan je &scaron;efom Protuobavje&scaron;tajne agencije za &scaron;to mu je bio nužan potpis biv&scaron;eg &scaron;efa Stjepana Mesića. Razlaz očito nije bio pretjerano buran pa se Mesić sa Sanaderom dogovorio oko imenovanja Tomislava Karamarka. Cijeli postupak ponovljen je jo&scaron; jednom, 2006. godine, kada postaje ravnatelj Sigurnosno &ndash; obavje&scaron;tajne agencije. Najveći Karamarkov obavje&scaron;tajni uspjeh bio je lociranje i uhićenje Ante Gotovine na Kanarskim otocima. POA je mjesecima prije uhićenja znala da se Gotovina nalazi na &scaron;panjolskom teritoriju i kada je nakon godina bijega konačno uhićen Hrvatska je zabilježila veliki politički plus i odmrznula odnose s Europskom unijom.</p>
+<p>Kako i priliči prvom među &scaron;pijunima Karamarko nestaje iz javnosti. No, zato mu se na privatnom planu događaju intenzivne promjene. Upoznaje Anu &Scaron;arić, tada zaposlenicu medijskog koncerna EPH, i s njom započinje ljubavnu vezu o kojoj priča cijeli Zagreb. No, tek 2011. godine razvodi se od dugogodi&scaron;nje supruge Enise Karamarko, s kojom ima dvoje djece. <strong><br />
+</strong></p>
+<p><strong>Obavje&scaron;tajci nisu radili svoj posao </strong></p>
+<p>Kako smo već na početku napisali Karamarko 2008. godine na Sanaderov poziv ulazi u Vladu. U to vrijeme nije član HDZ-a. Ubrzo po njegovom imenovanju spektakularno je ubijen Ivo Pukanić, a planiranje ubojstva zasigurno je počelo jo&scaron; dok je Karamarko bio &Scaron;ef SOA-e. Obavje&scaron;tajcima je u opisu posla da takve atentate sprečavaju no Karamarkovi &scaron;pijuni u tome su bili izuzetno neuspje&scaron;ni. Zagrebom su se neometano &scaron;etali srpski kriminalci koji su se osjećali dovoljno sigurno da su se međusobno i ubijali. Usprkos tome Sanader ga zadržava u Vladi sve do svog nenadanog odlaska u srpnju 2009. godine. Zadržava ga i Sanaderova nasljednica Jadranka Kosor, a policija pod njegovom palicom intenzivno surađuje s Državnim odvjetni&scaron;tvom na istragama korupcije među istaknutim HDZ-ovcima. <strong><br />
+</strong></p>
+<p><strong>Otarasio se &scaron;efice&nbsp; </strong></p>
+<p>Tek u jesen 2011. godine Karamarko se ponovno učlanjuje u HDZ. Stranačku iskaznicu mu pred kamerama uručuje osobno Jadranka Kosor, u jednom od posljednjih poku&scaron;aja da koliko-toliko popravi rejting pred izbore. Osigurala mu je i izvrsno mjesto na izbornoj listi pa Karamarko bez problema ulazi u Sabor. Već se tada znalo da Karamarko hlepi za njenim mjestom i da želi sam vladati HDZ-om nakon očekivanog gubitka izbora. Znalo se, ali Karamarko je tvrdio da su to podmetanja koja plasira tada oporbeni HDZ. Podmetanja očito nisu bila, ili ako su bila onda je i sam Karamarko nasjeo na njih &scaron;to je nimalo vjerojatno, pa se Karamarko kandidira na unutarstranačkim izborima i samo osam mjeseci nakon &scaron;to se ponovno učlanio u HDZ postaje predsjednik stranke. Jo&scaron; otprilike toliko vremena mu je trebalo da Jadranku Kosor izbaci iz stranke zabetonirav&scaron;i tako svoju poziciju u HDZ-u.</p>
+<p><strong>Strate&scaron;ka pogre&scaron;ka&nbsp; </strong></p>
+<p>Karamarko se u tom prvom saborskom mandatu nije proslavio. U Sabor je rijetko zalazio, a kada bi se i pojavio premijer Zoran Milanović je brisao pod njime. Umjesto da sjedi u Saboru i trpi ponižavanja Karamarko se posvetio stranci i pripremama za izbore 2015. godine. U tome je bio daleko uspje&scaron;niji. Godinu dana prije izbora HDZ je uvjerljivo vodio po svim relevantnim anketama i činilo se da će bez ikakvih problema smijeniti Milanovićevu vladu koja je gotovo jednodu&scaron;no progla&scaron;ena nesposobnom. Tada Karamarko čini golemu strate&scaron;ku gre&scaron;ku. Umjesto da inzistira na nesposobnosti i katastrofalnim rezultatima Milanovićeve vlade Karamarko borbu seli na ideolo&scaron;ko područje. U jednu ruku to je bilo i razumljivo jer je time pomogao Kolindi Grabar &ndash; Kitarović da pobijedi Ivu Josipovića na predsjedničkim izborima i tako nakon 15 godina vrati HDZ-u Pantovčak. U drugu ruku ideolo&scaron;ko prepucavanje i upozoravanje na nepostojeću komunističku opasnost obilo mu se o glavu. Na ideolo&scaron;kom području Milanović je puno jači igrač i iskoristio je njegovo žestoko skretanje udesno da vrati SDP iz mrtvih. Na koncu su na području države HDZ i SDP osvojili jednaki broj mandata- 56. HDZ je, kao i obično, osvojio jo&scaron; tri mandata u dijaspori, ali to im nije bilo ni blizu dovoljno da osiguraju natpolovičnu većinu od 76 saborskih zastupnika. Pojavio se, naime, MOST koji je u Sabor u&scaron;ao s 19 mandata, &scaron;to se ubrzo počelo osipati, i postao odlučujući faktor u formiranju Vlade.</p>
+<p>Most je pregovarao i s jednima i drugima, neprestano mijenjao mi&scaron;ljenje, no na koncu se odlučio za suradnju s HDZ-om, ali nije dozvolio Karamarku da postane premijer već su se odlučili za dotad potpuno nepoznatog Tihomira Ore&scaron;kovića. Karamarko je tako, u manje od godinu dana, od očekivanja apsolutne pobjede i neprikosnovene vlasti nad Hrvatskom sveden na prvog potpredsjednika Vlade bez stvarnih ovlasti. Inzistira na ovlastima nad represivnim i obavje&scaron;tajnim aparatom, ali Most mu to ne dozvoljava. Karamarko prihvaća tu zapravo ponižavajuću dužnost i poku&scaron;ava neformalno upravljati Vladom. No, to mu ne uspijeva ba&scaron; kao &scaron;to ni Vladi ne uspijeva ba&scaron; ni&scaron;ta osim proizvodnje skandala.</p>
+<p>Posljednji skandal, afera Konzultantica, suradnja Karamarkove druge supruge Ane s MOL-om, ali i Karamarkova davna suradnja s njima, povod su koji Most koristi da bi izbacio &scaron;efa HDZ-a iz Vlade. Poziv na smjenu pokrenuo je SDP, a Most je potvrdio da će u Saboru glasati protiv Karamarka. Uspiju li u tome to će biti kraj jedne političke karijere koja se prije samo godinu dana činila blistavom.</p>
+
+
+						
+						<div style="clear: both;"></div>
+
+						<!--oglasi-->
+
+						<div style="width: 300px; float: left">
+							<script type="text/javascript">
+								OA_show('300x250_Ispod_clanka_A');
+							</script>
+						</div>
+
+						<div style="width: 300px; float: right">
+							<script type="text/javascript">
+								OA_show('300x250_Ispod_clanka_B');
+							</script>
+						</div>
+
+						<div style="clear: both"></div>
+
+
+						<div class="toolbox" style="margin-top: 10px; padding-top: 7px; border-top: 1px solid #f0f0f0">
+
+							<!--div style="float:right; padding:2px 0px; overflow:hidden; position:relative"><script type="text/javascript">
+								                                                                                   tweetmeme_style = 'compact';
+                                                            </script>
+                                                            <script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
+					            </div-->
+							<div style="float: right; padding: 2px 0px; overflow: hidden; position: relative">
+								
+								<iframe src="http://www.facebook.com/plugins/share_button.php?href=http://www.index.hr/vijesti/clanak/karamarko--put-jednog-spijuna/895896.aspx&layout=button_count&appId=216060115209819&display=popup" width="100" height="20" frameborder="0"></iframe>
+							</div>
+
+							<div style="float: right">
+
+								<!-- Place this tag where you want the +1 button to render -->
+								<g:plusone annotation="inline" width="120" href="http://www.index.hr/vijesti/clanak/karamarko--put-jednog-spijuna/895896.aspx"></g:plusone>
+
+								<!-- Place this render call where appropriate -->
+								<script type="text/javascript">
+									(function () {
+										var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+										po.src = 'https://apis.google.com/js/plusone.js';
+										var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+									})();
+								</script>
+							</div>
+
+							<div style="clear: both"></div>
+						</div>
+
+
+					</div>
+
+
+
+				</div>
+
+			</div>
+
+
+			
+			
+			
+<div style="background: #fff; zoom: 1">
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$ArticleCommentsFb$hfFullUrl" id="ContentPlaceHolder1_ArticleCommentsFb_hfFullUrl" value="http://www.index.hr/vijesti/clanak/karamarko--put-jednog-spijuna/895896.aspx" />
+    
+    <h5 class="header">Komentari</h5>
+    <div style="padding: 10px">
+        <div class="commentdisclaimer">Komentari na  forumu objavljuju se u realnom vremenu i Index.hr ne može se smatrati odgovornim za izrečeno. Zabranjeno je vrijeđanje, psovanje i klevetanje. Upisi s takvim sadržajem bit će izbrisani, a njihovi autori prijavljeni nadležnim službama.</div>
+        <div class="fb-comments" data-href="http://www.index.hr/vijesti/clanak/karamarko--put-jednog-spijuna/895896.aspx" data-width="650" data-numposts="10" data-order-by="social"></div>
+    </div>
+    
+</div>
+
+		</div>
+
+
+
+
+		<div class="columnright">
+
+
+			<!-- vezana tema -->
+			
+			<!-- vezana tema -->
+
+			<script type="text/javascript">
+				OA_show('300x250A');
+			</script>
+			<div style="height: 15px"></div>
+
+			<!-- vezane vijesti -->
+			<h5 class="header">Vezano</h5>
+			<div id="relatedmenu">
+				<a href="#relatednews" onclick="relatedmenu.switchtab(0); return false">Vijesti</a> &nbsp;|&nbsp; 
+					
+					<a href="#relatedtags" onclick="relatedmenu.switchtab(1); return false">Tagovi</a>
+			</div>
+
+			
+					<ul id="relatednews" class="list_news">
+				
+					<li class="first"><em>Objavljeno prije 25 minuta</em><br /><a href="/vijesti/clanak/iznimno-napeta-situacija-karamarko-i-petrov-stoje-jedan-do-drugog-nisu-se-ni-pogledali/896075.aspx">Iznimno napeta situacija: Karamarko i Petrov stoje jedan do drugog, nisu se ni pogledali</a>
+					</li>
+				
+					<li><em>Objavljeno prije 2 sata</em><br /><a href="/vijesti/clanak/ivan-sincic-bozo-ne-lazi/896050.aspx">Ivan Sinčić: Božo, ne laži</a>
+					</li>
+				
+					<li><em>petak, 27.5.2016. 21:10</em><br /><a href="/vijesti/clanak/ovaj-brod-ludjaka-se-opasno-naginje-voda-propusta-a-bjezi-svatko-tko-stigne/896017.aspx">Ovaj brod luđaka se opasno naginje, voda propušta, a bježi svatko tko stigne</a>
+					</li>
+				
+					</ul>
+				
+			
+			<!-- vezane vijesti -->
+
+			
+					<ul id="relatedtags" class="list_news" style="display: none">
+				
+					<li class="first"><a style="color:#606060; text-decoration:none" href="/tag/142946/biografija.aspx">biografija</a>
+					</li>
+				
+					<li><a style="color:#606060; text-decoration:none" href="/tag/23552/tomislav-karamarko.aspx">Tomislav Karamarko</a>
+					</li>
+				</ul>
+			
+			<script type="text/javascript">
+				OA_show('300x250B');
+			</script>
+			<div style="height: 15px"></div>
+
+			<!-- novo i popularno -->
+			<div class="novoipopularno">
+				<h5 class="header">Najpopularnije</h5>
+				<div id="popularmenu">
+					<a href="#poptoday" onclick="popularmenu.switchtab(0); return false">Danas</a> &nbsp;|&nbsp; 
+						<a href="#popyesterday" onclick="popularmenu.switchtab(1); return false">Jučer</a> &nbsp;|&nbsp; 
+						<a href="#porweek" onclick="popularmenu.switchtab(2); return false">Tjedan</a>
+				</div>
+				<ul id="populartoday" class="list_news">
+					
+							<li class="first"><img src="http://www.index.hr/thumbnail.ashx?path=images2/sinciclazepetrov.jpg&amp;w=100&amp;h=50" alt="" /><em>Objavljeno prije 2 sata</em><br /><a href="/vijesti/clanak/ivan-sincic-bozo-ne-lazi/896050.aspx">Ivan Sinčić: Božo, ne laži</a>
+							</li>
+						
+							<li><img src="http://www.index.hr/thumbnail.ashx?path=images2/vrucekisica.jpg&amp;w=100&amp;h=50" alt="" /><em>Objavljeno prije sat vremena</em><br /><a href="/vijesti/clanak/okrutno-vrijeme-danas-idealno-a-sutra-dolazi-losa-promjena-koja-ce-trajati-cijeli-tjedan/896063.aspx">Okrutno vrijeme: Danas idealno, a sutra dolazi loša promjena koja će trajati cijeli tjedan</a>
+							</li>
+						
+							<li><img src="http://www.index.hr/thumbnail.ashx?path=images2/putin_H20160517013251.jpg&amp;w=100&amp;h=50" alt="" /><em>Objavljeno prije 2 sata</em><br /><a href="/vijesti/clanak/putin-prijeti-rumunjskoj-i-poljskoj-zbog-americkog-raketnog-stita-sad-ce-znati-sto-znaci-biti-na-meti/896054.aspx">Putin prijeti Rumunjskoj i Poljskoj zbog američkog raketnog štita: &quot;Sad će znati što znači biti na meti&quot;</a>
+							</li>
+						
+							<li><img src="http://www.index.hr/thumbnail.ashx?path=images2/kava_hasanbegovic_markic.jpg&amp;w=100&amp;h=50" alt="" /><em>Objavljeno prije sat vremena</em><br /><a href="/vijesti/clanak/foto-hasanbegovic-i-markicka-uhvaceni-na-kavi/896070.aspx">FOTO Hasanbegović i Markićka uhvaćeni na kavi</a>
+							</li>
+						
+							<li><img src="http://www.index.hr/thumbnail.ashx?path=images2/51557643_ml.jpg&amp;w=100&amp;h=50" alt="" /><em>Objavljeno prije 2 sata</em><br /><a href="/vijesti/clanak/trodnevna-blokada-u-zagrebu-zatvorit-ce-dio-grada-evo-gdje-se-ne-smijete-parkirati-niti-zaustavljati/896057.aspx">Trodnevna blokada u Zagrebu: Zatvorit će dio grada, evo gdje se ne smijete parkirati niti zaustavljati</a>
+							</li>
+						
+				</ul>
+				<ul id="popularyesterday" class="list_news" style="display: none">
+					
+							<li class="first"><img src="http://www.index.hr/thumbnail.ashx?path=images2/dijag_templateKaramarkoPetrovFAH.jpg&amp;w=100&amp;h=50" alt="" /><em>petak, 27.5.2016. 16:40</em><br /><a href="/vijesti/clanak/vlada-odlucila-podrzali-karamarka-hdzovci-glasali-protiv-a-most-za-smjenu/895836.aspx">VLADA ODLUČILA Podržali Karamarka: HDZ-ovci glasali protiv, a MOST za smjenu</a>
+							</li>
+						
+							<li><img src="http://www.index.hr/thumbnail.ashx?path=images2/grizlithomasbauer.jpg&amp;w=100&amp;h=50" alt="" /><em>petak, 27.5.2016. 13:25</em><br /><a href="/vijesti/clanak/mostov-provac-uputio-poruku-hdzu-dovidjenja-stakori/895926.aspx">MOST-ov PR-ovac uputio poruku HDZ-u: &quot;Doviđenja, štakori&quot;</a>
+							</li>
+						
+							<li><img src="http://www.index.hr/thumbnail.ashx?path=images2/H20160429000683TomislavKaramarkoTuzan1.jpg&amp;w=100&amp;h=50" alt="" /><em>petak, 27.5.2016. 17:40</em><br /><a href="/vijesti/clanak/krenulo-rusenje-karamarka-svi-mostovi-ministri-glasali-za-opoziv/895876.aspx">Krenulo rušenje Karamarka: Svi MOST-ovi ministri glasali za opoziv</a>
+							</li>
+						
+							<li><img src="http://www.index.hr/thumbnail.ashx?path=images2/puhovskiFAHova.jpg&amp;w=100&amp;h=50" alt="" /><em>petak, 27.5.2016. 20:07</em><br /><a href="/vijesti/clanak/puhovski-karamarko-opet-nije-u-stanju-spojiti-dvije-recenice-u-hdzu-nema-pet-pametnih-ljudi/896012.aspx">Puhovski: Karamarko opet nije u stanju spojiti dvije rečenice, u HDZ-u nema pet pametnih ljudi</a>
+							</li>
+						
+							<li><img src="http://www.index.hr/thumbnail.ashx?path=images2/prijelomnaaaaaa(1)_panenicccccccc.jpg&amp;w=100&amp;h=50" alt="" /><em>petak, 27.5.2016. 11:22</em><br /><a href="/vijesti/clanak/totalni-kaos-ministri-ne-znaju-kada-ce-glasati-panenic-za-index-premijer-nista-nije-javio/895895.aspx">TOTALNI KAOS Ministri ne znaju kada će glasati, Panenić za Index: &quot;Premijer ništa nije javio&quot;</a>
+							</li>
+						
+				</ul>
+				<ul id="popularweek" class="list_news" style="display: none">
+					
+							<li class="first"><img src="http://www.index.hr/thumbnail.ashx?path=images2/jokicbozanic.jpg&amp;w=100&amp;h=50" alt="" /><em>srijeda, 25.5.2016. 11:41</em><br /><a href="/vijesti/clanak/katolibanizacija-hrvatske-zaustavljena-reforma-skolstva-jokic-odlazi/895475.aspx">Katolibanizacija Hrvatske: Zaustavljena reforma školstva, Jokić odlazi</a>
+							</li>
+						
+							<li><img src="http://www.index.hr/thumbnail.ashx?path=images2/nacionalnaslovnica.jpg&amp;w=100&amp;h=50" alt="" /><em>utorak, 24.5.2016. 07:27</em><br /><a href="/vijesti/clanak/nacional-petrovic-iz-ine-placao-karamarkov-soboli/895185.aspx">Nacional: Petrović iz Ine plaćao Karamarkov Soboli</a>
+							</li>
+						
+							<li><img src="http://www.index.hr/thumbnail.ashx?path=images2/porukasrbimatwitter.jpg&amp;w=100&amp;h=50" alt="" /><em>srijeda, 25.5.2016. 08:47</em><br /><a href="/vijesti/clanak/drustvenim-mrezama-se-siri-jeziva-poruka-srbima-kraj-zagrebackog-vrtica/895430.aspx">Društvenim mrežama se širi jeziva poruka Srbima kraj zagrebačkog vrtića</a>
+							</li>
+						
+							<li><img src="http://www.index.hr/thumbnail.ashx?path=images2/2politicara_dogadaj_template_markic_batarelo.jpg&amp;w=100&amp;h=50" alt="" /><em>ponedjeljak, 23.5.2016. 14:07</em><br /><a href="/vijesti/clanak/markickin-ideolog-priznao-ovo-je-samo-pocetak-prvo-senzibiliziramo-za-fetuse-a-dalje-je-jasno/895032.aspx">Markićkin ideolog priznao: Ovo je samo početak, prvo senzibiliziramo za fetuse, a dalje je jasno</a>
+							</li>
+						
+							<li><img src="http://www.index.hr/thumbnail.ashx?path=images2/DarkoKnez-agrokor.jpg&amp;w=100&amp;h=50" alt="" /><em>utorak, 24.5.2016. 13:11</em><br /><a href="/vijesti/clanak/todorica-napustio-jedan-od-najvaznijih-direktora/895272.aspx">Todorića napustio jedan od najvažnijih direktora</a>
+							</li>
+						
+				</ul>
+			</div>
+			
+			<div>
+			<script type="text/javascript">
+				OA_show('300x250C');
+			</script>
+			</div>
+			
+			
+			<div style="height: 14px"></div>
+			<h5 class="header">Najnovije</h5>
+			<ul class="list_news">
+				
+						<li class="first"><em>Objavljeno prije 15 minuta</em><br /><a href="/vijesti/clanak/karamarko--put-jednog-spijuna/895896.aspx">Karamarko - put jednog špijuna</a>
+						</li>
+					
+						<li><em>Objavljeno prije 20 minuta</em><br /><a href="/vijesti/clanak/stotinu-znanstvenika-trazilo-preseljenje-oi-zbog-zike-who-odbio/896076.aspx">Stotinu znanstvenika tražilo preseljenje OI zbog zike, WHO odbio</a>
+						</li>
+					
+						<li><em>Objavljeno prije 25 minuta</em><br /><a href="/vijesti/clanak/iznimno-napeta-situacija-karamarko-i-petrov-stoje-jedan-do-drugog-nisu-se-ni-pogledali/896075.aspx">Iznimno napeta situacija: Karamarko i Petrov stoje jedan do drugog, nisu se ni pogledali</a>
+						</li>
+					
+						<li><em>Objavljeno prije 40 minuta</em><br /><a href="/vijesti/clanak/video-boris-jokic-susreo-se-s-milijanom-brkicem-u-ilici/896073.aspx">VIDEO Boris Jokić susreo se s Milijanom Brkićem u Ilici</a>
+						</li>
+					
+						<li><em>Objavljeno prije sat vremena</em><br /><a href="/vijesti/clanak/okrutno-vrijeme-danas-idealno-a-sutra-dolazi-losa-promjena-koja-ce-trajati-cijeli-tjedan/896063.aspx">Okrutno vrijeme: Danas idealno, a sutra dolazi loša promjena koja će trajati cijeli tjedan</a>
+						</li>
+					
+			</ul>
+			<!-- novo i popularno-->
+
+			
+
+		</div>
+
+		<div style="clear: both"></div>
+
+		<div style="height: 55px">&nbsp;</div>
+
+	</div>
+
+
+	<script type="text/javascript">
+		OA_show('Wallpaper');
+	</script>
+
+	<script type="text/javascript">
+		OA_show('InArticle');
+	</script>
+
+
+
+	<script type="text/javascript">
+		/*<![CDATA[*//*---->*/
+
+		function changeFontSize(el, inc, defvalue) {
+			minlimit = 11; maxlimit = 30
+			if (el.style.fontSize) { var size = parseInt(el.style.fontSize.replace("px", "")); } else { var size = defvalue }
+			if ((size + inc) <= maxlimit && (size + inc) >= minlimit) { el.style.fontSize = size + inc + 'px'; $.cookie("articleFontSize", size + inc, { expires: 365, path: '/' }); }
+		}
+
+		if ($.cookie("articleFontSize")) { changeFontSize(document.getElementById('article_text'), parseInt($.cookie("articleFontSize")) - 13, 13) }
+
+
+		function tabswitcher(tabs, holders, selectedClassName, normalClassName) {
+			//init
+			for (i = 0; i < holders.length; i++) {
+				if (i == 0) { holders[i].style.display = 'block'; tabs[i].className = selectedClassName } else { holders[i].style.display = 'none'; tabs[i].className = normalClassName }
+			}
+			//method			
+			this.switchtab = function (num) {
+				for (i = 0; i < holders.length; i++) { holders[i].style.display = 'none'; tabs[i].className = normalClassName }
+				//holders[num].style.display='block'; 
+				tabs[num].className = selectedClassName;
+				$(holders[num]).fadeIn("def");
+			}
+		}
+		/*--*//*]]>*/
+	</script>
+	<script type="text/javascript">    Cufon.now();</script>
+	<script type="text/javascript">
+		/*<![CDATA[*//*---->*/
+		//var articlemenu=new tabswitcher($('ul.#article_menu > li > a'),$('#article_text,#article_comments,#article_videos,#article_photos'),'sel','')
+		var relatedmenu = new tabswitcher($('div.#relatedmenu > a'), $('#relatednews,#relatedblogs,#relatedtags'), 'sel', '')
+		var popularmenu = new tabswitcher($('div.#popularmenu > a'), $('ul.#populartoday,ul.#popularyesterday,ul.#popularweek'), 'sel', '')
+		/*--*//*]]>*/
+	</script>
+
+	<script type="text/javascript">
+		/* CONFIGURATION START */
+		var _ain = {
+			id: "1216",
+			postid: "895896",
+			url: "http://www.index.hr/vijesti/clanak/permalink/895896.aspx",
+			title: "Karamarko - put jednog špijuna",
+			pubdate: "2016-05-28 10:44:14",
+			authors: "Vojislav Mazzocco",
+			sections: "HRVATSKA",
+			tags: "tomislavkaramarko,biografija",
+			comments: ""
+		};
+		/* CONFIGURATION END */
+		(function (d, s) {
+			var sf = d.createElement(s); sf.type = 'text/javascript'; sf.async = true;
+			sf.src = (('https:' == d.location.protocol) ? 'https://d7d3cf2e81d293050033-3dfc0615b0fd7b49143049256703bfce.ssl.cf1.rackcdn.com' : 'http://t.authorinsights.com') + '/stf.js';
+			var t = d.getElementsByTagName(s)[0]; t.parentNode.insertBefore(sf, t);
+		})(document, 'script');
+	</script>
+
+
+				<!-- end content -->
+
+			</div>
+
+		</div>
+
+	</form>
+
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		$(document).ready(function () {
+
+			var first = 0;
+			var speed = 200;
+			var pause = 5000;
+
+			function removeFirst() {
+				first = $('ul#listticker li:first').html();
+				$('ul#listticker li:first')
+			.animate({ opacity: 0 }, speed)
+			.fadeOut('fast', function () { $(this).remove(); });
+				addLast(first);
+			}
+
+			function addLast(first) {
+				last = '<li style="display:none">' + first + '</li>';
+				$('ul#listticker').append(last)
+				$('ul#listticker li:last')
+			.animate({ opacity: 1 }, speed)
+			.fadeIn('fast')
+			}
+
+			var cnt = 0;
+			function updateClock() {
+				cnt++;
+				var currentTime = new Date();
+				var currentYears = currentTime.getFullYear();
+				var currentMonths = currentTime.getMonth() + 1;
+				var currentDay = currentTime.getDate();
+				var currentHours = currentTime.getHours();
+				var currentMinutes = currentTime.getMinutes();
+				var currentSeconds = currentTime.getSeconds();
+
+				currentDay = (currentDay < 10 ? "0" : "") + currentDay;
+				currentMonths = (currentMonths < 10 ? "0" : "") + currentMonths;
+				currentHours = (currentHours < 10 ? "0" : "") + currentHours;
+				currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+
+
+				var currentTimeString
+
+				if (cnt % 2 == 0) {
+					currentTimeString = currentHours + ":" + currentMinutes
+				}
+				else {
+					currentTimeString = currentHours + "<span style='color:white'>:</span>" + currentMinutes;
+				}
+
+				document.getElementById("timeclock").innerHTML = currentTimeString;
+				document.getElementById("dateclock").innerHTML = currentDay + '.' + currentMonths + '.' + currentYears;
+			}
+
+			//interval = setInterval(removeFirst, pause);
+			//clockinterval = setInterval(updateClock, 500);
+		});
+		/* ]]> */
+	</script>
+
+	
+
+
+	<!--puls vijesti-->
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		(function () {
+			var d = document,
+			h = d.getElementsByTagName('head')[0],
+			s = d.createElement('script');
+			s.type = 'text/javascript';
+			s.async = true;
+			s.src = 'http://test-script.dotmetrics.net/door.js?id=329';
+			h.appendChild(s);
+		}());
+		/* ]]> */
+	</script>
+
+	
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-2490832-1']);
+		_gaq.push(['_setDomainName', 'index.hr']);
+		_gaq.push(['_trackPageview']);
+
+		(function () {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+	
+	
+<script src="/showads.js"></script>
+<script>  
+	if (typeof canshowads === 'undefined'){
+        if (typeof ga !== 'undefined') {
+            // Log an event in Universal Analytics
+            // but without affecting overall bounce rate
+            ga('send', 'event', 'Adblock', 'Yes', {'nonInteraction': 1}); 
+        } else if (typeof _gaq !== 'undefined') { 
+            // Log a non-interactive event in old Google Analytics
+            _gaq.push(['_trackEvent', 'Adblock', 'Yes', undefined, undefined, true]); 
+        }
+   }
+</script>	
+	
+</body>
+
+</html>

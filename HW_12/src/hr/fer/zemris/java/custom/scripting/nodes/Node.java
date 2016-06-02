@@ -1,6 +1,7 @@
 package hr.fer.zemris.java.custom.scripting.nodes;
 
-import hr.fer.zemris.java.custom.collections.ArrayIndexedCollection;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Base class for all graph nodes.
@@ -8,9 +9,9 @@ import hr.fer.zemris.java.custom.collections.ArrayIndexedCollection;
  * @author Ante Spajic
  *
  */
-public class Node {
+public abstract class Node {
 
-	private ArrayIndexedCollection children;
+	private List<Node> children;
 
 	/**
 	 * Adds given child to an internally managed collection of children.
@@ -20,9 +21,8 @@ public class Node {
 	 */
 	public void addChildNode(Node child) {
 		if (children == null) {
-			children = new ArrayIndexedCollection();
+			children = new ArrayList<>();
 		}
-
 		children.add(child);
 	}
 
@@ -55,7 +55,7 @@ public class Node {
 		if (index < 0 || index >= this.numberOfChildren()) {
 			throw new IndexOutOfBoundsException("Invalid index.");
 		}
-		return (Node) children.get(index);
+		return children.get(index);
 	}
 
 	/**
@@ -67,4 +67,10 @@ public class Node {
 		return "";
 	}
 	
+	/**
+	 * Method that is performed on this object by the provided visitor.
+	 * 
+	 * @param visitor visitor to perform the action
+	 */
+	public abstract void accept(INodeVisitor visitor);
 }
