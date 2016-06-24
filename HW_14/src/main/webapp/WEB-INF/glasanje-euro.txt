@@ -1,0 +1,8 @@
+Hrvatska	https://www.youtube.com/watch?v=pBVnHc75xxM
+Španjolska	https://en.wikipedia.org/wiki/Spain_national_football_team
+Njemačka	https://en.wikipedia.org/wiki/Germany_national_football_team
+Italija	https://en.wikipedia.org/wiki/Italy_national_football_team
+Francuska	https://en.wikipedia.org/wiki/France_national_football_team
+Engleska	https://en.wikipedia.org/wiki/England_national_football_team
+Turska	https://www.youtube.com/watch?v=2Z4m4lnjxkY
+Poljska	https://en.wikipedia.org/wiki/Poland_national_football_team

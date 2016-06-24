@@ -1,0 +1,2 @@
+Glasanje za omiljeni bend:	Od sljedećih bendova, koji Vam je bend najdraži? Kliknite na link kako biste glasali!	glasanje-bendovi.txt
+Glasanje za pobjednika europskog prvenstva u nogometu 2016:	Od sljedećih ekipa, za koju ekipu mislite da će pobijediti!	glasanje-euro.txt

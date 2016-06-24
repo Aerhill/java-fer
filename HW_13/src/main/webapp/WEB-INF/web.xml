@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" metadata-complete="false" version="3.0">
+  <display-name>Moja druga aplikacija</display-name>
+  <description>
+     Druga aplikacija
+  </description>
+  <servlet>
+    <servlet-name>Funny</servlet-name>
+    <jsp-file>/WEB-INF/pages/stories/funny.jsp</jsp-file>
+  </servlet>
+  <servlet>
+    <servlet-name>AppInfo</servlet-name>
+    <jsp-file>/WEB-INF/pages/appinfo.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Funny</servlet-name>
+    <url-pattern>/funny</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AppInfo</servlet-name>
+    <url-pattern>/appinfo</url-pattern>
+  </servlet-mapping>
+</web-app>
