@@ -1,0 +1,11 @@
+Poruka iz tvrtke #${Tvrtka
+Direktor tvrtke je: #${director}$#
+
+Poštovani,
+
+evo malo matematike. Neka je u=5, c=2, b=7, e=3. Vrijedi:
+
+c<u>d, d<b>e
+
+što sigurno znamo o d? Ako znate odgovor, Vi ste čovjek koji nam treba i mi imamo baš pravi proizvod za Vas. Da biste doznali više o ovoj revolucionarnoj ponudi, slobodno se obradite na #${ e-mail   }$#.
+Vaš #${sales representative}$#

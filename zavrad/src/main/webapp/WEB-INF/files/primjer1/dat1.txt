@@ -1,0 +1,5 @@
+Poruka iz tvrtke #${Tvrtka
+Direktor tvrtke je: #${Director}$#
+Poštovani,
+ljeto se bliži pa Vam nudimo najnovije (znanstveno dokazane i potvrđene) čajeve za skidanje kilograma. Pijenjem naših čajeva bez odlaska u teretanu povećat ćete mišičnu masu i istopiti kilograme. Za više informacija slobodno se obradite na #${ e-mail   }$#.
+Vaš #${sales representative}$#
